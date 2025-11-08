@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uranus Fazry MLBB Portal | Layla Nexus Sea</title>
+    <title>Uranus Fazry MLBB Portal | THAMUZ THE ANNIHILATOR</title>
     
     <!-- Font Awesome --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -183,8 +183,11 @@
             position: relative;
             font-family: 'Orbitron', sans-serif;
             font-weight: 900;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.05em; /* Diubah: Mengurangi spasi untuk teks panjang */
             text-transform: uppercase;
+            font-size: 2.5rem; /* Diubah: Ukuran desktop default baru */
+            line-height: 1.2; /* Ditambahkan: Untuk handle wrap jika perlu */
+            margin-bottom: 1rem; /* Dipindahkan dari inline style */
         }
 
         .glitch-effect::before,
@@ -613,7 +616,8 @@
 
             /* Mengurangi ukuran font judul utama dan jam di mobile */
             .glitch-effect {
-                font-size: 2rem; /* Sedikit lebih kecil dari 2.75rem */
+                font-size: 1.75rem; /* Diubah: Disesuaikan untuk teks panjang */
+                letter-spacing: 0.03em; /* Diubah: Spasi lebih rapat */
             }
             #time {
                 font-size: 2.25rem; /* Sedikit lebih kecil dari 2.75rem */
@@ -751,8 +755,8 @@
         <div class="container">
             <div style="display: flex; justify-content: space-between; align-items: center;">
                 <!-- Logo --><div id="logo-container" style="display: flex; align-items: center; cursor: pointer; user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;">
-                    <img src="https://i.imghippo.com/files/EePl9866XxI.png" alt="Layla Logo" class="logo-pulse" style="height: 50px; width: auto;" draggable="false">
-                    <span class="font-orbitron plasma-text" style="font-weight: 700; font-size: 1.25rem; letter-spacing: 0.05em; margin-left: 1rem;">MLBB LAYLA</span>
+                    <img src="https://i.imghippo.com/files/EePl9866XxI.png" alt="Thamuz Logo" class="logo-pulse" style="height: 50px; width: auto;" draggable="false">
+                    <span class="font-orbitron plasma-text" style="font-weight: 700; font-size: 1.25rem; letter-spacing: 0.05em; margin-left: 1rem;">MLBB THAMUZ</span>
                 </div>
 
                 <!-- Desktop Nav --><div style="display: none;" class="desktop-nav">
@@ -820,7 +824,7 @@
         </div>
     </div>
 
-    <!-- Main Content --><main class="container content-layer" style="padding-top: 100px; padding-bottom: 2rem;">
+    <!-- Main Content --><main class="container content-layer" style="padding-top: 60px; padding-bottom: 2rem;">
         <header style="text-align: center; margin-bottom: 3rem;">
             <!-- Profile --><div class="profile">
                 <!-- Ganti img dengan video, tambahkan object-position --><video src="https://files.catbox.moe/kwq2bv.mp4" alt="Profile Video" autoplay loop muted playsinline
@@ -828,7 +832,8 @@
         </div>
 
             <!-- Epic Title --><div style="display: inline-block; margin-bottom: 1.5rem;">
-                <h1 class="font-orbitron glitch-effect plasma-text" data-text="LAYLA NEXUS SEA" style="font-size: 2.75rem; font-weight: 900; margin-bottom: 1rem;">LAYLA NEXUS SEA</h1>
+                <!-- Diperbarui: Menghapus style inline, mengganti data-text dan inner text -->
+                <h1 class="font-orbitron glitch-effect plasma-text" data-text="THAMUZ THE ANNIHILATOR">THAMUZ THE ANNIHILATOR</h1>
             </div>
             <p class="font-exo plasma-text" style="font-size: 1.125rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600;">MLBB Creator & Web Developer</p>
             <p style="max-width: 42rem; margin: 1.5rem auto 0; font-size: 1rem; line-height: 1.6; color: rgba(0, 180, 216, 0.7);">
@@ -847,7 +852,7 @@
     </main>
 
     <!-- Footer --><footer class="content-layer" style="text-align: center; color: #fff;">
-        <p class="font-orbitron" style="font-size: 0.875rem; opacity: 0.85;">© 2025 Created by Layla Nexus Sea | All Rights Reserved</p>
+        <p class="font-orbitron" style="font-size: 0.875rem; opacity: 0.85;">© 2025 Created by THAMUZ THE ANNIHILATOR | All Rights Reserved</p>
         <p class="plasma-text font-orbitron" style="font-size: 0.75rem; margin-top: 0.5rem;">Powered by Uranus Support Technology</p>
     </footer>
 
@@ -992,18 +997,18 @@
 
             const defaultPortals = [
                 { 
-                    name: 'Layla Premium Access', // Diperbarui
+                    name: 'Thamuz Premium Access', // Diperbarui
                     url: 'https://api.whatsapp.com/send/?phone=6287872521809&text=Halo%2C+saya+ingin+membeli+Akses+Website+Premium+Tanpa+Iklan+sebesar+Rp25.000.+Mohon+transfer+ke+DANA+087734421123+dan+kirimkan+bukti+pembayarannya.+Pesanan+akan+diproses+maksimal+1x24+jam.+Terima+kasih.&type=phone_number&app_absent=0', 
                     icon: 'fas fa-gem', 
                     color: '#00b4d8', 
                     description: 'Upgrade sekarang — akses semua website uranus tanpa iklan cuma Rp25K' 
                 },
                 { 
-                    name: 'Buy Layla Nexus Sea Code', // Diperbarui
-                    url: 'https://api.whatsapp.com/send/?phone=6287872521809&text=Halo%2C+saya+ingin+membeli+Kode+Website+MLBB+Layla+Skin+Nexus+Sea+sebesar+Rp100.000.+Mohon+transfer+ke+DANA+087734421123+dan+kirimkan+bukti+pembayarannya.+Pesanan+akan+diproses+maksimal+1x24+jam.+Terima+kasih.&type=phone_number&app_absent=0', 
+                    name: 'Buy Thamuz Annihilator Code', // Diperbarui
+                    url: 'https://api.whatsapp.com/send/?phone=6287872521809&text=Halo%2C+saya+ingin+membeli+Kode+Website+MLBB+Thamuz+The+Annihilator+sebesar+Rp100.000.+Mohon+transfer+ke+DANA+087734421123+dan+kirimkan+bukti+pembayarannya.+Pesanan+akan+diproses+maksimal+1x24+jam.+Terima+kasih.&type=phone_number&app_absent=0', 
                     icon: 'fas fa-shopping-cart', // Diperbarui
                     color: '#00b4d8', // Diperbarui
-                    description: 'Beli kode website MLBB Layla Nexus Sea edisi premium seharga Rp100K' // Diperbarui
+                    description: 'Beli kode website MLBB Thamuz The Annihilator edisi premium seharga Rp100K' // Diperbarui
                 }
             ];
 
@@ -1013,8 +1018,8 @@
                 updateTime();
                 setInterval(updateTime, 1000);
 
-                /*
-                // Event listener light-mode dinonaktifkan sesuai pembersihan header
+                
+                // Event listener light-mode diaktifkan kembali
                 logoContainer.addEventListener('click', () => {
                     if (!isVideoFinished) {
                         console.log("Light mode locked until video ends.");
@@ -1025,7 +1030,7 @@
                         bgImage.style.opacity = '0.35';
                     }
                 });
-                */
+                
 
                 mobileMenuButton.addEventListener('click', () => {
                     mobileMenu.classList.add('open'); // Diubah: Menggunakan display
