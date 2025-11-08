@@ -167,6 +167,14 @@
             text-shadow: 0 0 20px var(--neon-cyan), 0 0 40px var(--plasma-blue);
         }
 
+        /* Aturan baru untuk menonaktifkan text-shadow khusus di header */
+        .navbar .plasma-text,
+        #mobile-menu .plasma-text,
+        .navbar .nav-item:hover span, 
+        .navbar .nav-item:hover i {
+            text-shadow: none;
+        }
+
         .abyss-text {
             color: var(--abyss-purple);
             text-shadow: 0 0 15px var(--abyss-purple), 0 0 30px var(--cosmic-violet);
@@ -195,18 +203,18 @@
 
         /* Navbar */
         .navbar {
-            background: rgba(11, 11, 11, 0.85);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 3px solid transparent;
-            border-image: linear-gradient(90deg, var(--abyss-purple), var(--plasma-blue), var(--magma-orange)) 1;
-            box-shadow: 0 5px 40px rgba(58, 12, 163, 0.4), 0 0 20px rgba(0, 180, 216, 0.3);
-            transition: all 0.3s ease;
+            background: var(--obsidian-black); /* Disederhanakan */
+            backdrop-filter: none; /* Dihapus */
+            -webkit-backdrop-filter: none; /* Dihapus */
+            border-bottom: 3px solid var(--plasma-blue); /* Disederhanakan */
+            border-image: none; /* Dihapus */
+            box-shadow: none; /* Dihapus */
+            transition: none; /* Dihapus */
         }
 
         .navbar .container > div {
             height: 75px;
-            transition: height 0.3s ease;
+            transition: none; /* Dihapus */
         }
 
         @media (min-width: 768px) {
@@ -216,51 +224,38 @@
         }
 
         .nav-item {
-            transition: all 0.3s ease;
+            transition: none; /* Dihapus */
             position: relative;
             padding: 0.5rem 1rem;
         }
 
         .nav-item:hover span, .nav-item:hover i {
             color: var(--plasma-blue);
-            text-shadow: 0 0 20px var(--neon-cyan);
+            text-shadow: none; /* Dihapus (ditangani oleh aturan baru di atas) */
         }
 
         .nav-item::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--plasma-blue), var(--magma-orange));
-            transition: width 0.3s ease;
-            border-radius: 2px;
-            box-shadow: 0 0 15px var(--plasma-blue);
+            display: none; /* Dihapus */
         }
 
-        .nav-item:hover::after {
-            width: 100%;
-        }
+        /* .nav-item:hover::after Dihapus karena ::after disembunyikan */
 
         /* Dropdown */
         .dropdown {
             display: none;
             position: absolute;
-            background: rgba(11, 11, 11, 0.98);
-            backdrop-filter: blur(25px);
-            -webkit-backdrop-filter: blur(25px);
+            background: var(--obsidian-black); /* Disederhanakan */
+            backdrop-filter: none; /* Dihapus */
+            -webkit-backdrop-filter: none; /* Dihapus */
             border: 2px solid var(--plasma-blue);
-            box-shadow: 0 15px 50px rgba(0, 180, 216, 0.4), inset 0 0 30px rgba(58, 12, 163, 0.2);
+            box-shadow: none; /* Dihapus */
             border-radius: 16px;
             margin-top: 12px;
-            animation: dropFadeIn 0.3s ease;
+            animation: none; /* Dihapus */
         }
 
         @keyframes dropFadeIn {
-            from { opacity: 0; transform: translateY(-15px); }
-            to { opacity: 1; transform: translateY(0); }
+            /* Dihapus */
         }
 
         .group:hover .dropdown {
@@ -271,11 +266,11 @@
         #mobile-menu-overlay {
             position: fixed;
             inset: 0;
-            background: rgba(11, 11, 11, 0.9);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
+            background: rgba(11, 11, 11, 0.9); /* Disederhanakan */
+            backdrop-filter: none; /* Dihapus */
+            -webkit-backdrop-filter: none; /* Dihapus */
             z-index: 55;
-            transition: opacity 0.3s ease;
+            transition: none; /* Dihapus */
         }
 
         #mobile-menu {
@@ -285,21 +280,22 @@
             height: 100%;
             width: 85%;
             max-width: 350px;
-            background: linear-gradient(180deg, rgba(11, 11, 11, 0.98) 0%, rgba(26, 9, 51, 0.98) 100%);
-            backdrop-filter: blur(25px);
-            -webkit-backdrop-filter: blur(25px);
+            background: var(--obsidian-black); /* Disederhanakan */
+            backdrop-filter: none; /* Dihapus */
+            -webkit-backdrop-filter: none; /* Dihapus */
             border-left: 3px solid var(--plasma-blue);
-            box-shadow: -5px 0 50px rgba(0, 180, 216, 0.5);
+            box-shadow: none; /* Dihapus */
             z-index: 60;
-            transform: translateX(100%);
-            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform: none; /* Dihapus */
+            transition: none; /* Dihapus */
             padding: 2rem 1.5rem;
-            display: flex;
+            display: none; /* Diubah dari transform */
             flex-direction: column;
         }
 
         #mobile-menu.open {
-            transform: translateX(0);
+            transform: none; /* Dihapus */
+            display: flex; /* Diubah dari transform */
         }
 
         /* Cosmic Flare Buttons */
@@ -601,30 +597,27 @@
 
         /* Logo Animation */
         .logo-pulse {
-            animation: cosmicPulse 5s ease-in-out infinite;
-            filter: drop-shadow(0 0 20px var(--plasma-blue));
+            animation: none; /* Dihapus */
+            filter: none; /* Dihapus */
         }
 
-       /* Footer (Refactor) */
+        /* Footer */
         footer {
-            background: rgba(5, 0, 8, 0.8);
-            border-top: 1px solid rgba(0, 212, 255, 0.2);
-            /* [PERBAIKAN FOOTER] */
-            margin-top: auto; /* Mendorong footer ke bawah */
-            
-            /* [EDIT] Atur tinggi dan perataan */
-            height: 60px;
+            background: linear-gradient(180deg, rgba(11, 11, 11, 0.95) 0%, rgba(26, 9, 51, 0.95) 100%);
+            border-top: 3px solid transparent;
+            border-image: linear-gradient(90deg, var(--abyss-purple), var(--plasma-blue), var(--magma-orange)) 1;
+            margin-top: auto;
+            min-height: 80px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding-left: 1rem;
-            padding-right: 1rem;
+            padding: 1.5rem 0; /* Diperbarui: Menghapus padding horizontal, mempertahankan padding vertikal */
+            box-shadow: 0 -5px 40px rgba(58, 12, 163, 0.4);
         }
 
-        /* [EDIT] Ukuran font footer */
         footer p:first-child {
-            font-size: 13px;
+            font-size: 16px; /* Diperbarui: Menaikkan ukuran font agar mudah dibaca */
         }
 
         /* Utility Classes */
@@ -659,22 +652,22 @@
     <canvas id="particle-canvas"></canvas>
 
     <!-- Navbar -->
-    <nav class="navbar fixed top-0 left-0 right-0 z-50 content-layer" style="position: fixed; top: 0; left: 0; right: 0; z-index: 50;">
-        <div class="container" style="max-width: 1280px; margin: 0 auto; padding: 0 1.5rem;">
+    <nav class="navbar fixed top-0 left-0 right-0 z-50 content-layer"> <!-- style dihapus -->
+        <div class="container"> <!-- style dihapus -->
             <div style="display: flex; justify-content: space-between; align-items: center;">
                 <!-- Logo -->
                 <div id="logo-container" style="display: flex; align-items: center; cursor: pointer; user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;">
-                    <img src="https://i.imghippo.com/files/EePl9866XxI.png" alt="Thamuz Logo" class="logo-pulse" style="height: 55px; width: auto;" draggable="false">
-                    <span class="font-orbitron plasma-text" style="font-weight: 800; font-size: 1.35rem; letter-spacing: 0.08em; margin-left: 1.2rem;">MLBB THAMUZ</span>
+                    <img src="https://i.imghippo.com/files/EePl9866XxI.png" alt="Thamuz Logo" style="height: 55px; width: auto;" draggable="false"> <!-- class 'logo-pulse' dan style dihapus -->
+                    <span class="font-orbitron" style="font-weight: 800; font-size: 1.35rem; letter-spacing: 0.08em; margin-left: 1.2rem; color: var(--plasma-blue);">MLBB THAMUZ</span> <!-- class 'plasma-text' dihapus, style dihapus, warna ditambahkan manual -->
                 </div>
 
                 <!-- Desktop Nav -->
-                <div style="display: none;" class="desktop-nav">
+                <div class="desktop-nav"> <!-- style 'display: none' dihapus -->
                     <div class="nav-item relative group" style="display: inline-block; position: relative;">
-                        <button class="plasma-text" style="display: flex; align-items: center; gap: 0.6rem; background: none; border: none; cursor: pointer; font-family: 'Orbitron', sans-serif; font-size: 0.95rem; text-transform: uppercase; font-weight: 700;">
+                        <button style="display: flex; align-items: center; gap: 0.6rem; background: none; border: none; cursor: pointer; font-family: 'Orbitron', sans-serif; font-size: 0.95rem; text-transform: uppercase; font-weight: 700; color: var(--plasma-blue);"> <!-- class 'plasma-text' dihapus, style dihapus, warna ditambahkan manual -->
                             <i class="fas fa-skull-crossbones"></i>
                             <span>Abyssal Forge</span>
-                            <i class="fas fa-chevron-down" style="font-size: 0.8rem; transition: transform 0.3s;"></i>
+                            <i class="fas fa-chevron-down" style="font-size: 0.8rem;"></i> <!-- transition dihapus dari style -->
                         </button>
                         <div class="dropdown" style="position: absolute; right: 0; width: 340px; padding: 1.75rem; margin-top: 0.75rem;">
                             <h3 class="font-orbitron" style="font-size: 0.95rem; margin-bottom: 1.2rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--plasma-blue);">Portal Creation</h3>
@@ -699,7 +692,7 @@
 
                 <!-- Mobile Menu Button -->
                 <div class="mobile-nav-toggle">
-                    <button id="mobile-menu-button" class="plasma-text" style="background: none; border: none; font-size: 2.2rem; cursor: pointer; outline: none;">
+                    <button id="mobile-menu-button" style="background: none; border: none; font-size: 2.2rem; cursor: pointer; outline: none; color: var(--plasma-blue);"> <!-- class 'plasma-text' dihapus, style dihapus, warna ditambahkan manual -->
                         <i class="fas fa-skull-crossbones"></i>
                     </button>
                 </div>
@@ -708,8 +701,8 @@
     </nav>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu-overlay" class="fixed inset-0 z-50 hidden" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 55;" onclick="closeMobileMenu()"></div>
-    <div id="mobile-menu" style="padding: 2.25rem 1.75rem;">
+    <div id="mobile-menu-overlay" class="fixed inset-0 z-50 hidden" onclick="closeMobileMenu()"></div> <!-- style dihapus -->
+    <div id="mobile-menu"> <!-- style dihapus -->
         <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 1.2rem; border-bottom: 2px solid rgba(0, 180, 216, 0.4);">
             <span class="font-orbitron" style="font-size: 1.25rem; color: var(--plasma-blue); font-weight: 700;">ABYSSAL FORGE</span>
             <button onclick="closeMobileMenu()" style="background: none; border: none; font-size: 1.75rem; cursor: pointer; color: var(--plasma-blue);">
@@ -763,15 +756,15 @@
         </div>
 
         <!-- Portal Grid -->
-        <div id="portals-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 3.5rem;">
+        <div id="portals-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 2rem; margin-bottom: 3.5rem;">
             <!-- Portal cards rendered by JS -->
         </div>
     </main>
 
     <!-- Footer -->
     <footer class="content-layer" style="text-align: center; color: #fff;">
-        <p class="font-orbitron" style="font-size: 0.95rem; opacity: 0.9; font-weight: 600;">© 2025 Created by Thamuz The Annihilator | All Rights Reserved</p>
-        <p class="plasma-text font-orbitron" style="font-size: 0.8rem; margin-top: 0.6rem; font-weight: 500;">Forged by Uranus Support Technology</p>
+        <p class="font-orbitron" style="font-size: 1rem; opacity: 0.9; font-weight: 600;">© 2025 Created by Thamuz The Annihilator | All Rights Reserved</p>
+        <p class="plasma-text font-orbitron" style="font-size: 0.85rem; margin-top: 0.6rem; font-weight: 500;">Forged by Uranus Support Technology</p>
     </footer>
 
     <!-- Add Portal Modal -->
@@ -939,6 +932,7 @@
                 updateTime();
                 setInterval(updateTime, 1000);
 
+                /*
                 logoContainer.addEventListener('click', () => {
                     if (!isVideoFinished) {
                         console.log("Light mode locked until video ends.");
@@ -949,11 +943,12 @@
                         bgImage.style.opacity = '0.35';
                     }
                 });
+                */
 
                 mobileMenuButton.addEventListener('click', () => {
                     mobileMenu.classList.add('open');
                     mobileMenuOverlay.classList.remove('hidden');
-                    mobileMenuOverlay.style.display = 'block';
+                    // mobileMenuOverlay.style.display = 'block'; // Diubah menggunakan class
                     document.body.style.overflow = 'hidden';
                 });
 
@@ -993,7 +988,7 @@
             window.closeMobileMenu = function() {
                 mobileMenu.classList.remove('open');
                 mobileMenuOverlay.classList.add('hidden');
-                mobileMenuOverlay.style.display = 'none';
+                // mobileMenuOverlay.style.display = 'none'; // Diubah menggunakan class
                 document.body.style.overflow = '';
             }
 
