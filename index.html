@@ -616,9 +616,39 @@
             box-shadow: 0 -5px 40px rgba(58, 12, 163, 0.4);
         }
 
+        /* Aturan baru untuk padding teks di dalam footer */
+        footer p {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
         footer p:first-child {
             font-size: 16px; /* Diperbarui: Menaikkan ukuran font agar mudah dibaca */
         }
+
+        /* === Mobile Overrides === */
+        @media (max-width: 480px) {
+            /* Mengurangi padding horizontal container waktu agar pas di layar kecil */
+            .time-container {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            /* Mengurangi ukuran font judul utama dan jam di mobile */
+            .cosmic-glitch {
+                font-size: 2rem; /* Sedikit lebih kecil dari 2.75rem */
+            }
+            #time {
+                font-size: 2.25rem; /* Sedikit lebih kecil dari 2.75rem */
+            }
+
+            /* Mengurangi ukuran avatar di mobile */
+            .profile {
+                width: 150px;
+                height: 150px;
+            }
+        }
+
 
         /* Utility Classes */
         .container {
