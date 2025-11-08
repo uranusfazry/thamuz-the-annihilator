@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uranus Fazry MLBB Portal | Layla Nexus Sea</title>
     
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Libraries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <!-- Libraries --><script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 
@@ -390,12 +388,12 @@
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             position: relative;
             overflow: hidden;
-            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.7), 0 0 20px currentColor;
+            /* Dihapus: box-shadow: 0 5px 30px rgba(0, 0, 0, 0.7), 0 0 20px currentColor; */
         }
 
         .portal-card:hover {
             transform: translateY(-12px) scale(1.02);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 50px currentColor, inset 0 0 30px rgba(58, 12, 163, 0.2);
+            /* Dihapus: box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 50px currentColor, inset 0 0 30px rgba(58, 12, 163, 0.2); */
         }
 
         .portal-card::before {
@@ -477,7 +475,7 @@
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border: 2px solid var(--plasma-blue);
-            box-shadow: 0 0 35px rgba(0, 180, 216, 0.5), inset 0 0 30px rgba(58, 12, 163, 0.3);
+            /* Dihapus: box-shadow: 0 0 35px rgba(0, 180, 216, 0.5), inset 0 0 30px rgba(58, 12, 163, 0.3); */
             border-radius: 12px;
             position: relative;
             overflow: hidden;
@@ -741,8 +739,7 @@
 </head>
 <body>
 
-    <!-- Background -->
-    <div id="bg-container">
+    <!-- Background --><div id="bg-container">
         <video id="bg-video" class="bg-media" autoplay muted playsinline>
             <source src="https://files.catbox.moe/9htlh6.mp4" type="video/mp4">
         </video>
@@ -750,18 +747,15 @@
     </div>
     <canvas id="particle-canvas"></canvas>
 
-    <!-- Navbar -->
-    <nav class="navbar fixed top-0 left-0 right-0 z-50 content-layer">
+    <!-- Navbar --><nav class="navbar fixed top-0 left-0 right-0 z-50 content-layer">
         <div class="container">
             <div style="display: flex; justify-content: space-between; align-items: center;">
-                <!-- Logo -->
-                <div id="logo-container" style="display: flex; align-items: center; cursor: pointer; user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;">
+                <!-- Logo --><div id="logo-container" style="display: flex; align-items: center; cursor: pointer; user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;">
                     <img src="https://i.imghippo.com/files/EePl9866XxI.png" alt="Layla Logo" class="logo-pulse" style="height: 50px; width: auto;" draggable="false">
                     <span class="font-orbitron plasma-text" style="font-weight: 700; font-size: 1.25rem; letter-spacing: 0.05em; margin-left: 1rem;">MLBB LAYLA</span>
                 </div>
 
-                <!-- Desktop Nav -->
-                <div style="display: none;" class="desktop-nav">
+                <!-- Desktop Nav --><div style="display: none;" class="desktop-nav">
                     <div class="nav-item relative group" style="display: inline-block; position: relative;">
                         <button class="plasma-text" style="display: flex; align-items: center; gap: 0.5rem; background: none; border: none; cursor: pointer; font-family: 'Orbitron', sans-serif; font-size: 0.875rem; text-transform: uppercase; color: var(--plasma-blue);">
                             <i class="fas fa-skull-crossbones"></i>
@@ -789,8 +783,7 @@
                     </div>
                 </div>
 
-                <!-- Mobile Menu Button -->
-                <div class="mobile-nav-toggle">
+                <!-- Mobile Menu Button --><div class="mobile-nav-toggle">
                     <button id="mobile-menu-button" class="plasma-text" style="background: none; border: none; font-size: 2rem; cursor: pointer; outline: none; color: var(--plasma-blue);">
                         <i class="fas fa-skull-crossbones"></i>
                     </button>
@@ -799,8 +792,7 @@
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu-overlay" class="fixed inset-0 z-50 hidden" onclick="closeMobileMenu()"></div>
+    <!-- Mobile Menu --><div id="mobile-menu-overlay" class="fixed inset-0 z-50 hidden" onclick="closeMobileMenu()"></div>
     <div id="mobile-menu">
         <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 1rem; border-bottom: 1px solid rgba(0, 180, 216, 0.3);">
             <span class="font-orbitron plasma-text" style="font-size: 1.125rem; color: var(--plasma-blue);">ABYSSAL FORGE</span>
@@ -828,17 +820,14 @@
         </div>
     </div>
 
-    <!-- Main Content -->
-    <main class="container content-layer" style="padding-top: 70px; padding-bottom: 2rem;">
+    <!-- Main Content --><main class="container content-layer" style="padding-top: 100px; padding-bottom: 2rem;">
         <header style="text-align: center; margin-bottom: 3rem;">
-            <!-- Profile -->
-            <div class="profile">
+            <!-- Profile --><div class="profile">
                 <!-- Ganti img dengan video, tambahkan object-position --><video src="https://files.catbox.moe/kwq2bv.mp4" alt="Profile Video" autoplay loop muted playsinline
                 style="object-position: 50% 25%; will-change: transform;"> <!-- [DITAMBAHKAN] Memicu akselerasi GPU --></video>
         </div>
 
-            <!-- Epic Title -->
-            <div style="display: inline-block; margin-bottom: 1.5rem;">
+            <!-- Epic Title --><div style="display: inline-block; margin-bottom: 1.5rem;">
                 <h1 class="font-orbitron glitch-effect plasma-text" data-text="LAYLA NEXUS SEA" style="font-size: 2.75rem; font-weight: 900; margin-bottom: 1rem;">LAYLA NEXUS SEA</h1>
             </div>
             <p class="font-exo plasma-text" style="font-size: 1.125rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600;">MLBB Creator & Web Developer</p>
@@ -846,28 +835,23 @@
             </p>
         </header>
 
-        <!-- Time Display -->
-        <div style="display: flex; justify-content: center; margin-bottom: 3rem;">
+        <!-- Time Display --><div style="display: flex; justify-content: center; margin-bottom: 3rem;">
             <div class="time-container" style="padding: 1.5rem 2rem; text-align: center;">
                 <div id="time" class="font-orbitron plasma-text" style="font-size: 2.5rem; font-weight: 700;">00:00:00</div>
                 <div id="date" class="font-orbitron abyssal-text" style="font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.5rem;">Loading...</div>
             </div>
         </div>
 
-        <!-- Portal Grid -->
-        <div id="portals-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
-            <!-- Portal cards rendered by JS -->
-        </div>
+        <!-- Portal Grid --><div id="portals-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+            <!-- Portal cards rendered by JS --></div>
     </main>
 
-    <!-- Footer -->
-    <footer class="content-layer" style="text-align: center; color: #fff;">
+    <!-- Footer --><footer class="content-layer" style="text-align: center; color: #fff;">
         <p class="font-orbitron" style="font-size: 0.875rem; opacity: 0.85;">© 2025 Created by Layla Nexus Sea | All Rights Reserved</p>
         <p class="plasma-text font-orbitron" style="font-size: 0.75rem; margin-top: 0.5rem;">Powered by Uranus Support Technology</p>
     </footer>
 
-    <!-- Add Portal Modal -->
-    <div id="add-portal-modal" class="fixed inset-0 flex items-center justify-center z-50 hidden modal-overlay" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; display: none; align-items: center; justify-content: center; z-index: 50;">
+    <!-- Add Portal Modal --><div id="add-portal-modal" class="fixed inset-0 flex items-center justify-center z-50 hidden modal-overlay" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; display: none; align-items: center; justify-content: center; z-index: 50;">
         <div class="modal-content" style="max-width: 28rem; width: 100%; margin: 0 1.5rem; position: relative; padding: 2rem;">
             <button onclick="document.getElementById('add-portal-modal').style.display = 'none'" style="position: absolute; top: 1rem; right: 1rem; font-size: 2rem; background: none; border: none; cursor: pointer; transition: all 0.3s;" class="plasma-text">×</button>
             
@@ -939,8 +923,7 @@
         </div>
     </div>
 
-    <!-- Confirmation Modal -->
-    <div id="confirmation-modal" class="fixed inset-0 flex items-center justify-center hidden modal-overlay" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; display: none; align-items: center; justify-content: center; z-index: 60;">
+    <!-- Confirmation Modal --><div id="confirmation-modal" class="fixed inset-0 flex items-center justify-center hidden modal-overlay" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; display: none; align-items: center; justify-content: center; z-index: 60;">
         <div class="modal-content" style="max-width: 28rem; width: 100%; margin: 0 1rem; position: relative; padding: 2rem; text-align: center;">
             <h2 class="font-orbitron plasma-text" style="font-size: 1.25rem; margin-bottom: 1rem; font-weight: 700;">Confirm Action</h2>
             <p id="confirmation-message" style="margin-bottom: 1.5rem; font-size: 1.125rem; color: rgba(0, 180, 216, 0.8);">Are you sure?</p>
