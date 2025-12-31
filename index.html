@@ -3,21 +3,416 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uranus Fazry MLBB Portal | THAMUZ THE ANNIHILATOR</title>
+    <title>MLBB Portal | Thamuz The Annihilator by Uranusfazry</title>
     
-    <!-- Font Awesome --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f525.png">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Libraries --><script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.5.0/lz-string.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
 
     <style>
-        @import url(https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&display=swap);@import url(https://fonts.googleapis.com/css2?family=Exo+2:wght@700;900&display=swap);@import url(https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap);@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap);#particle-canvas,body::after,body::before{z-index:1;pointer-events:none;position:fixed}#bg-container,#particle-canvas,.bg-media,body::after,body::before{left:0;width:100%;height:100%;top:0}.dropdown,.nav-item::after{box-shadow:none;position:absolute}#mobile-menu.open,body{display:flex}body,input,select,textarea{font-family:Poppins,sans-serif}:root{--abyssal-purple:#3a0ca3;--plasma-blue:#00b4d8;--magma-orange:#ff6a00;--obsidian-black:#0b0b0b;--deep-void:#1a0033;--neon-violet:#7209b7;--cosmic-cyan:#48cae4;--inferno-red:#d00000}*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}body{background:linear-gradient(135deg,var(--obsidian-black) 0,var(--deep-void) 50%,#0d0221 100%);color:#fff;min-height:100vh;overflow-x:hidden;position:relative;flex-direction:column;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}#bg-container{position:fixed;z-index:0;overflow:hidden}.bg-media{position:absolute;object-fit:cover;filter:brightness(.25) saturate(1.8) hue-rotate(260deg);transition:transform .5s,opacity .5s,filter .5s}#bg-video{opacity:.25;z-index:1}#bg-image{opacity:0;z-index:0}@media (min-width:1024px){.bg-media{width:100vh;height:100vw;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-90deg)}}body::before{content:'';background:radial-gradient(ellipse at 30% 20%,rgba(58,12,163,.3) 0,transparent 50%),radial-gradient(ellipse at 70% 80%,rgba(0,180,216,.2) 0,transparent 50%),radial-gradient(ellipse at 50% 50%,rgba(255,106,0,.15) 0,transparent 70%);animation:10s ease-in-out infinite cosmicPulse}@keyframes cosmicPulse{0%,100%{opacity:.5}50%{opacity:.9}}body::after{content:'';background-image:linear-gradient(rgba(58,12,163,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(0,180,216,.05) 1px,transparent 1px);background-size:50px 50px;animation:20s linear infinite plasmaDrift}@keyframes plasmaDrift{0%{transform:translate(0,0)}100%{transform:translate(50px,50px)}}.content-layer{position:relative;z-index:10}main.content-layer{flex-grow:1}.font-orbitron{font-family:Orbitron,sans-serif}.font-exo{font-family:'Exo 2',sans-serif}.abyssal-text{color:var(--abyssal-purple)}.plasma-text{color:var(--plasma-blue)}.annihilator-text{background:linear-gradient(135deg,var(--plasma-blue),var(--abyssal-purple),var(--magma-orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}#mobile-menu,.dropdown,.navbar,select option{background:var(--obsidian-black)}.glitch-effect{position:relative;font-family:Orbitron,sans-serif;font-weight:900;letter-spacing:.05em;text-transform:uppercase;font-size:2.5rem;line-height:1.2;margin-bottom:1rem}.glitch-effect::after,.glitch-effect::before{content:attr(data-text);position:absolute;top:0;left:0;width:100%;height:100%;opacity:.8}.glitch-effect::before{color:var(--inferno-red);z-index:-1;animation:3s infinite glitch1}.glitch-effect::after{color:var(--cosmic-cyan);z-index:-2;animation:2.5s infinite glitch2}@keyframes glitch1{0%,100%{transform:translate(0);clip-path:inset(0 0 0 0)}20%{transform:translate(-2px,2px);clip-path:inset(20% 0 40% 0)}40%{transform:translate(-2px,-2px);clip-path:inset(40% 0 20% 0)}60%{transform:translate(2px,2px);clip-path:inset(60% 0 10% 0)}80%{transform:translate(2px,-2px);clip-path:inset(10% 0 30% 0)}}@keyframes glitch2{0%,100%{transform:translate(0);clip-path:inset(0 0 0 0)}10%{transform:translate(-2px,1px);clip-path:inset(70% 0 10% 0)}20%{transform:translate(2px,-1px);clip-path:inset(15% 0 50% 0)}30%{transform:translate(-1px,2px);clip-path:inset(40% 0 20% 0)}}.navbar{border-bottom:2px solid var(--abyssal-purple)}.navbar .container>div{height:70px;transition:height .3s}@media (min-width:768px){.navbar .container>div{height:90px}}.nav-item{position:relative;padding:.5rem 1rem}.btn-lava,.btn-secondary{padding:.75rem 1.5rem;font-weight:700;letter-spacing:.08em;transition:.3s;font-family:Orbitron,sans-serif;text-transform:uppercase;text-shadow:none}.nav-item:hover i,.nav-item:hover span{color:var(--plasma-blue);text-shadow:none}.nav-item::after{content:'';bottom:-5px;left:50%;transform:translateX(-50%);width:0;height:3px;background:linear-gradient(90deg,var(--abyssal-purple),var(--plasma-blue),var(--magma-orange));transition:width .3s;border-radius:2px}.nav-item:hover::after{width:100%}.dropdown{display:none;border:2px solid var(--plasma-blue);border-radius:12px;margin-top:12px}.btn-lava,.time-container{border:2px solid var(--plasma-blue);overflow:hidden}.group:hover .dropdown{display:block}#mobile-menu-overlay{position:fixed;inset:0;background:rgba(11,11,11,.85);z-index:55;transition:opacity .3s}#mobile-menu{position:fixed;top:0;right:0;height:100%;width:80%;max-width:320px;border-left:2px solid var(--plasma-blue);z-index:60;padding:2rem 1.5rem;display:none;flex-direction:column}.btn-lava{background:linear-gradient(135deg,var(--abyssal-purple),var(--plasma-blue));border-radius:8px;position:relative;z-index:1;display:inline-flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 0 25px rgba(0,180,216,.5),0 0 40px rgba(58,12,163,.3)}.btn-lava::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,106,0,.6),transparent);transition:left .5s;z-index:-1;animation:3s ease-in-out infinite plasmaFlow}@keyframes plasmaFlow{0%,100%{left:-100%}50%{left:100%}}.btn-lava:hover{box-shadow:0 0 40px var(--plasma-blue),0 0 60px var(--magma-orange);transform:translateY(-3px) scale(1.05);border-color:var(--cosmic-cyan)}.btn-lava:active{transform:translateY(0) scale(.97);box-shadow:0 0 20px var(--plasma-blue);transition-duration:.1s}.btn-secondary{background:rgba(58,12,163,.15);border:2px solid rgba(0,180,216,.5);border-radius:8px;color:var(--plasma-blue)}.btn-secondary:hover{background:rgba(58,12,163,.3);border-color:var(--plasma-blue);box-shadow:0 0 25px rgba(0,180,216,.4);transform:translateY(-2px)}.portal-card{background:rgba(11,11,11,.7);backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);border:2px solid;border-radius:16px;transition:.4s cubic-bezier(.175, .885, .32, 1.275);position:relative;overflow:hidden}.portal-card:hover{transform:translateY(-12px) scale(1.02)}.portal-card::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:linear-gradient(45deg,transparent 30%,rgba(0,180,216,.15) 50%,transparent 70%);transform:rotate(45deg);animation:6s linear infinite plasmaShimmer;opacity:.8}@keyframes plasmaShimmer{0%{transform:translateX(-100%) translateY(-100%) rotate(45deg)}100%{transform:translateX(100%) translateY(100%) rotate(45deg)}}.delete-btn{position:absolute;top:12px;right:12px;color:rgba(208,0,0,.8);background:rgba(0,0,0,.5);border-radius:50%;width:32px;height:32px;display:flex;align-items:center;justify-content:center;transition:.3s;z-index:20;opacity:.7;border:1px solid rgba(208,0,0,.6)}.portal-card:hover .delete-btn{opacity:1}.delete-btn:hover{color:var(--inferno-red);background:rgba(0,0,0,.7);transform:scale(1.2);box-shadow:0 0 20px var(--inferno-red)}.profile{margin:0 auto 2rem;width:160px;height:160px;border-radius:50%;overflow:hidden;border:4px solid var(--plasma-blue);box-shadow:0 0 40px var(--plasma-blue),0 0 60px var(--abyssal-purple);position:relative;animation:4s ease-in-out infinite profilePulse}@keyframes profilePulse{0%,100%{box-shadow:0 0 40px var(--plasma-blue),0 0 60px var(--abyssal-purple)}50%{box-shadow:0 0 60px var(--cosmic-cyan),0 0 80px var(--neon-violet)}}.profile img,.profile video{width:100%;height:100%;object-fit:cover;position:relative;z-index:1}.time-container{background:rgba(11,11,11,.8);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-radius:12px;position:relative}.modal-overlay,footer{background:rgba(11,11,11,.9)}.time-container::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(0,180,216,.4),transparent);animation:5s ease-in-out infinite timeScan}@keyframes timeScan{0%,100%{left:-100%}50%{left:100%}}.modal-overlay{backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);animation:.3s modalFadeIn}.modal-content{background:rgba(11,11,11,.95);backdrop-filter:blur(30px);-webkit-backdrop-filter:blur(30px);border:2px solid var(--plasma-blue);box-shadow:0 0 60px rgba(0,180,216,.5),0 0 40px rgba(58,12,163,.3);border-radius:16px;animation:.4s cubic-bezier(.175,.885,.32,1.275) modalSlideIn}@keyframes modalFadeIn{from{opacity:0}to{opacity:1}}@keyframes modalSlideIn{from{transform:translateY(-40px) scale(.9);opacity:0}to{transform:translateY(0) scale(1);opacity:1}}input,select,textarea{background:rgba(11,11,11,.9)!important;border:2px solid rgba(0,180,216,.4);transition:.3s;border-radius:8px;color:#fff}input:focus,select:focus,textarea:focus{border-color:var(--plasma-blue);box-shadow:0 0 25px rgba(0,180,216,.6),0 0 15px rgba(58,12,163,.4);outline:0;background:rgba(11,11,11,.95)!important}select option{color:#fff;padding:10px}::placeholder{color:rgba(0,180,216,.5);opacity:1}.modal-content code{background:rgba(0,0,0,.5);color:var(--plasma-blue);padding:3px 6px;border-radius:4px;font-family:Inter,sans-serif}::-webkit-scrollbar{width:12px}::-webkit-scrollbar-track{background:rgba(11,11,11,.7)}::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--abyssal-purple),var(--plasma-blue));border-radius:6px}::-webkit-scrollbar-thumb:hover{background:linear-gradient(180deg,var(--plasma-blue),var(--magma-orange))}.logo-pulse{filter:drop-shadow(0 0 20px var(--plasma-blue))}footer{border-top:2px solid rgba(58,12,163,.5);margin-top:auto;height:auto;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:1.5rem 0;box-shadow:0 -4px 30px rgba(58,12,163,.3),0 0 20px rgba(0,180,216,.2)}footer p{padding-left:1rem;padding-right:1rem}footer p:first-child{font-size:16px}@media (max-width:480px){.time-container{padding-left:1rem;padding-right:1rem}.glitch-effect{font-size:1.75rem;letter-spacing:.03em}#time{font-size:2.25rem}.profile{width:150px;height:150px}}.container{max-width:1200px;margin:0 auto;padding:0 1rem}.hidden{display:none}body.light-mode #bg-image{opacity:1!important;filter:saturate(1.15)}body.light-mode #bg-video{opacity:.35;z-index:1}.hero-section{min-height:70vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:4rem 1rem;position:relative}.hero-content{max-width:900px;z-index:2}.hero-title{font-family:Orbitron,sans-serif;font-size:clamp(2.5rem, 8vw, 5rem);font-weight:900;margin-bottom:1rem;line-height:1.1;text-transform:uppercase;letter-spacing:.12em}.hero-subtitle{font-family:'Exo 2',sans-serif;font-size:clamp(1.2rem, 3vw, 2rem);font-weight:700;margin-bottom:2.5rem;color:var(--plasma-blue);letter-spacing:.1em}.hero-buttons{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap}.cosmic-energy{position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,var(--abyssal-purple) 0,transparent 70%);filter:blur(80px);opacity:.4;animation:8s ease-in-out infinite energyFloat}.cosmic-energy:first-child{top:10%;left:15%;animation-delay:0s}.cosmic-energy:nth-child(2){bottom:15%;right:10%;background:radial-gradient(circle,var(--plasma-blue) 0,transparent 70%);animation-delay:2s}.cosmic-energy:nth-child(3){top:50%;left:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,var(--magma-orange) 0,transparent 70%);animation-delay:4s}@keyframes energyFloat{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(30px,-30px) scale(1.2)}}#mobile-menu .abyssal-text,#mobile-menu .plasma-text,.navbar .abyssal-text,.navbar .plasma-text{text-shadow:none}
+        /* === VISUAL STYLE: THAMUZ THEME (CLEAN / NO GLOW) === */
+
+        /* Import Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+        /* Color Variables */
+        :root {
+            --abyssal-purple: #3a0ca3;
+            --plasma-blue: #00b4d8;
+            --magma-orange: #ff6a00;
+            --obsidian-black: #0b0b0b;
+            --deep-void: #1a0033;
+            --neon-violet: #7209b7;
+            --cosmic-cyan: #48cae4;
+            --inferno-red: #d00000;
+            --success-green: #00e0b8; 
+            --warning-yellow: #ffd700;
+            --error-red: #d00000;
+        }
+
+        /* Reset & Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--obsidian-black) 0%, var(--deep-void) 50%, #0d0221 100%);
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Background Effects - Clean */
+        #bg-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .bg-media {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.25) saturate(1.8) hue-rotate(260deg);
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+
+        #bg-video { opacity: 0.25; z-index: 1; }
+        #bg-image { opacity: 0; z-index: 0; }
+
+        @media (min-width: 1024px) {
+            .bg-media {
+                width: 100vh;
+                height: 100vw;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(-90deg);
+            }
+        }
+
+        #particle-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .content-layer { position: relative; z-index: 10; }
+        main.content-layer { flex-grow: 1; }
+
+        /* Typography */
+        .font-orbitron { font-family: 'Orbitron', sans-serif; }
+        .font-exo { font-family: 'Exo 2', sans-serif; }
+        .abyssal-text { color: var(--abyssal-purple); }
+        .plasma-text { color: var(--plasma-blue); }
+        .annihilator-text {
+            background: linear-gradient(135deg, var(--plasma-blue), var(--abyssal-purple), var(--magma-orange));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Title - No Glitch Animation */
+        .glitch-effect {
+            position: relative;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 900;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--plasma-blue); /* Solid color */
+        }
+
+        /* Navbar */
+        .navbar {
+            background: var(--obsidian-black);
+            border-bottom: 2px solid var(--abyssal-purple);
+        }
+        .navbar .container > div { height: 70px; transition: height 0.3s ease; }
+        @media (min-width: 768px) { .navbar .container > div { height: 90px; } }
+        .nav-item { position: relative; padding: 0.5rem 1rem; }
+        .nav-item:hover span, .nav-item:hover i { color: var(--plasma-blue); }
+        .nav-item::after {
+            content: ''; position: absolute; bottom: -5px; left: 50%; transform: translateX(-50%);
+            width: 0; height: 3px;
+            background: linear-gradient(90deg, var(--abyssal-purple), var(--plasma-blue), var(--magma-orange));
+            transition: width 0.3s ease; border-radius: 2px;
+        }
+        .nav-item:hover::after { width: 100%; }
+
+        /* Dropdown */
+        .dropdown {
+            display: none; position: absolute;
+            background: var(--obsidian-black);
+            border: 2px solid var(--plasma-blue);
+            border-radius: 12px; margin-top: 12px;
+        }
+        .group:hover .dropdown { display: block; }
+
+        /* Mobile Menu */
+        #mobile-menu-overlay {
+            position: fixed; inset: 0;
+            background: rgba(11, 11, 11, 0.95); /* Solid dark */
+            z-index: 55; transition: opacity 0.3s ease;
+        }
+        #mobile-menu {
+            position: fixed; top: 0; right: 0; height: 100%; width: 80%; max-width: 320px;
+            background: var(--obsidian-black);
+            border-left: 2px solid var(--plasma-blue);
+            z-index: 60; padding: 2rem 1.5rem;
+            display: none; flex-direction: column;
+        }
+        #mobile-menu.open { display: flex; }
+
+        /* Buttons - No Glow/Shimmer */
+        .btn-lava {
+            font-family: 'Orbitron', sans-serif;
+            background: linear-gradient(135deg, var(--abyssal-purple), var(--plasma-blue));
+            border: 2px solid var(--plasma-blue);
+            border-radius: 8px; padding: 0.75rem 1.5rem;
+            font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
+            transition: all 0.3s ease; position: relative; overflow: hidden; z-index: 1;
+            display: inline-flex; align-items: center; justify-content: center; color: #fff;
+            box-shadow: none !important; /* NO GLOW */
+        }
+        .btn-lava:hover {
+            transform: translateY(-3px) scale(1.05); border-color: var(--cosmic-cyan);
+            box-shadow: none !important; /* NO GLOW */
+        }
+        .btn-lava:active { transform: translateY(0) scale(0.97); transition-duration: 0.1s; }
+
+        .btn-secondary {
+            font-family: 'Orbitron', sans-serif;
+            background: rgba(58, 12, 163, 0.15);
+            border: 2px solid rgba(0, 180, 216, 0.5);
+            border-radius: 8px; padding: 0.75rem 1.5rem;
+            font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
+            transition: all 0.3s ease; color: var(--plasma-blue);
+            box-shadow: none !important;
+        }
+        .btn-secondary:hover {
+            background: rgba(58, 12, 163, 0.3); border-color: var(--plasma-blue);
+            transform: translateY(-2px);
+            box-shadow: none !important;
+        }
+
+        /* Portal Cards - No Glow/Shimmer */
+        .portal-card {
+            background: rgba(11, 11, 11, 0.85); /* More solid */
+            backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
+            border: 2px solid; border-radius: 16px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative; overflow: hidden;
+            display: flex; flex-direction: column; cursor: pointer;
+            box-shadow: none !important; /* NO GLOW */
+        }
+        .portal-card:hover { transform: translateY(-5px); } /* Reduced movement */
+
+        /* Lock & Delete Indicator */
+        .delete-btn {
+            position: absolute; top: 12px; right: 12px;
+            color: rgba(208, 0, 0, 0.8); background: rgba(0, 0, 0, 0.5);
+            border-radius: 50%; width: 32px; height: 32px;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.3s ease; z-index: 20; opacity: 0.7;
+            border: 1px solid rgba(208, 0, 0, 0.6);
+            box-shadow: none !important;
+        }
+        .portal-card:hover .delete-btn { opacity: 1; }
+        .delete-btn:hover { color: var(--inferno-red); background: rgba(0, 0, 0, 0.7); transform: scale(1.1); }
+
+        .lock-indicator {
+            position: absolute; top: 12px; left: 12px;
+            color: var(--plasma-blue); background: rgba(0, 0, 0, 0.5);
+            border-radius: 50%; width: 32px; height: 32px;
+            display: flex; align-items: center; justify-content: center;
+            z-index: 20; border: 1px solid var(--plasma-blue); font-size: 0.9rem;
+        }
+
+        /* Close Button Box Style */
+        .btn-close-box {
+            position: absolute; top: 1rem; right: 1rem;
+            width: 36px; height: 36px;
+            background: rgba(58, 12, 163, 0.2);
+            border: 1px solid var(--plasma-blue);
+            border-radius: 8px; /* Membuat bentuk kotak dengan sudut sedikit tumpul */
+            color: var(--plasma-blue);
+            display: flex; align-items: center; justify-content: center;
+            cursor: pointer; transition: all 0.3s ease;
+            z-index: 10;
+        }
+        .btn-close-box:hover {
+            background: var(--plasma-blue); color: #fff;
+            transform: rotate(90deg); /* Efek putar saat hover */
+        }
+
+        /* Profile - No Glow/Pulse */
+        .profile {
+            margin: 0 auto 2rem; width: 160px; height: 160px;
+            border-radius: 50%; overflow: hidden;
+            border: 4px solid var(--plasma-blue);
+            position: relative;
+            box-shadow: none !important; /* NO GLOW */
+            animation: none !important; /* NO PULSE */
+        }
+        .profile img, .profile video { width: 100%; height: 100%; object-fit: cover; position: relative; z-index: 1; }
+
+        /* Modals - No Glow */
+        .modal-overlay {
+            background: rgba(11, 11, 11, 0.95);
+            backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);
+            animation: modalFadeIn 0.3s ease;
+        }
+        .modal-content {
+            position: relative; /* Memastikan tombol close berada di dalam kotak modal */
+            background: rgba(11, 11, 11, 0.98); /* Solid */
+            border: 2px solid var(--plasma-blue);
+            box-shadow: none !important; /* NO GLOW */
+            border-radius: 16px; padding: 2rem !important;
+            animation: modalSlideIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            width: 90%; max-width: 400px; margin: 0 auto;
+        }
+        @keyframes modalFadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes modalSlideIn { from { transform: translateY(-40px) scale(0.9); opacity: 0; } to { transform: translateY(0) scale(1); opacity: 1; } }
+
+        /* Inputs - No Glow */
+        input, textarea, select {
+            background: rgba(11, 11, 11, 0.9) !important;
+            border: 2px solid rgba(0, 180, 216, 0.4);
+            transition: all 0.3s ease; border-radius: 8px;
+            color: #fff; font-family: 'Poppins', sans-serif;
+            padding: 0.75rem !important; width: 100%;
+            box-shadow: none !important;
+        }
+        input:focus, textarea:focus, select:focus {
+            border-color: var(--plasma-blue);
+            outline: none; background: rgba(11, 11, 11, 0.95) !important;
+            box-shadow: none !important;
+        }
+        select option { background: var(--obsidian-black); color: #fff; padding: 10px; }
+        ::placeholder { color: rgba(0, 180, 216, 0.5); opacity: 1; }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 12px; }
+        ::-webkit-scrollbar-track { background: rgba(11, 11, 11, 0.7); }
+        ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, var(--abyssal-purple), var(--plasma-blue)); border-radius: 6px; }
+        ::-webkit-scrollbar-thumb:hover { background: linear-gradient(180deg, var(--plasma-blue), var(--magma-orange)); }
+
+        .logo-pulse { filter: none !important; } /* NO GLOW */
+        
+        footer {
+            background: rgba(11, 11, 11, 0.95); border-top: 2px solid rgba(58, 12, 163, 0.5);
+            margin-top: auto; padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: none !important; /* NO GLOW */
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+        .hidden { display: none; }
+        
+        body.light-mode #bg-image { opacity: 1 !important; filter: saturate(1.15); }
+        body.light-mode #bg-video { opacity: 0.35; z-index: 1; }
+        
+        .navbar .plasma-text, .navbar .abyssal-text, #mobile-menu .plasma-text, #mobile-menu .abyssal-text { text-shadow: none; }
+
+        /* === STRUKTUR & FUNCTIONAL STYLES === */
+        
+        /* Grid Layout Fix */
+        #portals-grid {
+            display: grid; gap: 1.5rem; margin-bottom: 3rem;
+            grid-template-columns: 1fr; /* Mobile */
+        }
+        @media (min-width: 640px) { #portals-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 1024px) { #portals-grid { grid-template-columns: repeat(3, 1fr); } }
+
+        /* Notification System - Clean */
+        .notif-container {
+            position: fixed; top: 20px; right: 20px; z-index: 9999;
+            display: flex; flex-direction: column; gap: 15px; pointer-events: none;
+        }
+        .notif-toast {
+            min-width: 320px; max-width: 400px;
+            background: rgba(11, 11, 11, 0.98);
+            border-left: 4px solid var(--plasma-blue);
+            border-radius: 8px; padding: 16px 20px;
+            box-shadow: none !important; /* NO GLOW */
+            display: flex; align-items: flex-start; gap: 15px;
+            transform: translateX(120%); transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            pointer-events: auto; position: relative; overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .notif-toast.show { transform: translateX(0); }
+        .notif-toast.success { border-color: var(--success-green); }
+        .notif-toast.success .notif-icon { color: var(--success-green); background: rgba(0, 224, 184, 0.1); }
+        .notif-toast.error { border-color: var(--error-red); }
+        .notif-toast.error .notif-icon { color: var(--error-red); background: rgba(208, 0, 0, 0.1); }
+
+        .notif-icon {
+            width: 32px; height: 32px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 16px; flex-shrink: 0;
+        }
+        .notif-content { flex-grow: 1; }
+        .notif-title { font-family: 'Orbitron', sans-serif; font-weight: 700; font-size: 0.95rem; color: #fff; margin-bottom: 4px; }
+        .notif-message { font-family: 'Poppins', sans-serif; font-size: 0.85rem; color: rgba(255, 255, 255, 0.8); line-height: 1.4; }
+        .notif-close { background: none; border: none; color: rgba(255, 255, 255, 0.5); cursor: pointer; font-size: 1.1rem; padding: 0; }
+        .notif-progress {
+            position: absolute; bottom: 0; left: 0; height: 3px;
+            background: linear-gradient(90deg, var(--abyssal-purple), var(--plasma-blue));
+            width: 100%; transform-origin: left; animation: progressLinear 4s linear forwards;
+        }
+        @keyframes progressLinear { from { width: 100%; } to { width: 0%; } }
+
+        /* Elements from Code 1 that need styling */
+        .hidden-content { display: none; margin-top: 1rem; animation: fadeIn 0.5s ease; }
+        .reveal-btn {
+            width: 100%; padding: 0.75rem 1.5rem;
+            background: rgba(58, 12, 163, 0.15); border: 2px solid var(--plasma-blue);
+            border-radius: 8px; color: var(--plasma-blue);
+            font-family: 'Orbitron', sans-serif; font-size: 0.85rem; font-weight: 700;
+            cursor: pointer; display: flex; align-items: center; justify-content: center;
+            gap: 10px; transition: all 0.3s ease; text-transform: uppercase;
+            box-shadow: none !important;
+        }
+        .reveal-btn:hover { background: rgba(58, 12, 163, 0.3); transform: translateY(-2px); }
+        .shortener-badge {
+            background: rgba(0, 180, 216, 0.1); border: 1px solid var(--plasma-blue);
+            border-radius: 4px; padding: 4px 8px; font-family: 'Inter', sans-serif;
+            color: #fff; font-size: 0.85rem; display: inline-block; margin: 0 4px;
+        }
+        #qr-canvas-display { border-radius: 12px; max-width: 200px; width: 100%; height: auto; box-shadow: none !important; border: 1px solid var(--plasma-blue); }
+        
+        .hide-capacity { opacity: 0; max-height: 0; margin-bottom: 0 !important; overflow: hidden; transition: all 0.5s ease; }
+
+        @media (max-width: 768px) {
+            .notif-container { top: auto; bottom: 30px; right: 0; left: 0; align-items: center; }
+            .notif-toast { transform: translateY(100px); min-width: 90%; max-width: 90%; }
+            .notif-toast.show { transform: translateY(0); }
+            
+            .glitch-effect { font-size: 1.75rem; letter-spacing: 0.03em; }
+            .profile { width: 150px; height: 150px; }
+        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
     </style>
 </head>
 <body>
 
-    <!-- Background --><div id="bg-container">
+    <!-- Background -->
+    <div id="bg-container">
         <video id="bg-video" class="bg-media" autoplay muted playsinline>
             <source src="https://files.catbox.moe/9htlh6.mp4" type="video/mp4">
         </video>
@@ -25,35 +420,48 @@
     </div>
     <canvas id="particle-canvas"></canvas>
 
-    <!-- Navbar --><nav class="navbar fixed top-0 left-0 right-0 z-50 content-layer">
+    <!-- Notification Container -->
+    <div id="notif-container" class="notif-container"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar fixed top-0 left-0 right-0 z-50 content-layer" style="position: fixed; top: 0; left: 0; right: 0; z-index: 50;">
         <div class="container">
             <div style="display: flex; justify-content: space-between; align-items: center;">
-                <!-- Logo --><div id="logo-container" style="display: flex; align-items: center; cursor: pointer; user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;">
+                <!-- Logo -->
+                <div id="logo-container" style="display: flex; align-items: center; cursor: pointer; user-select: none;">
                     <img src="https://i.imghippo.com/files/EePl9866XxI.png" alt="Thamuz Logo" class="logo-pulse" style="height: 50px; width: auto;" draggable="false">
                     <span class="font-orbitron plasma-text" style="font-weight: 700; font-size: 1.25rem; letter-spacing: 0.05em; margin-left: 1rem;">MLBB THAMUZ</span>
                 </div>
 
-                <!-- Desktop Nav --><div style="display: none;" class="desktop-nav">
+                <!-- Desktop Nav -->
+                <div style="display: none;" class="desktop-nav">
                     <div class="nav-item relative group" style="display: inline-block; position: relative;">
-                        <button class="plasma-text" style="display: flex; align-items: center; gap: 0.5rem; background: none; border: none; cursor: pointer; font-family: 'Orbitron', sans-serif; font-size: 0.875rem; text-transform: uppercase; color: var(--plasma-blue);">
+                        <button class="plasma-text" style="display: flex; align-items: center; gap: 0.5rem; background: none; border: none; cursor: pointer; font-family: 'Orbitron', sans-serif; font-size: 0.875rem; text-transform: uppercase;">
                             <i class="fas fa-skull-crossbones"></i>
                             <span>Abyssal Forge</span>
                             <i class="fas fa-chevron-down" style="font-size: 0.75rem; transition: transform 0.3s;"></i>
                         </button>
                         <div class="dropdown" style="position: absolute; right: 0; width: 320px; padding: 1.5rem; margin-top: 0.75rem;">
-                            <h3 class="font-orbitron abyssal-text" style="font-size: 0.875rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--abyssal-purple);">Portal Forge</h3>
-                            
+                            <h3 class="font-orbitron abyssal-text" style="font-size: 0.875rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Craft Portal</h3>
                             <button onclick="showAddLinkModal()" class="btn-secondary" style="width: 100%; font-size: 0.875rem; margin-bottom: 1rem;">
                                 <i class="fas fa-plus" style="margin-right: 0.5rem;"></i>Add Portal
                             </button>
 
-                            <h3 class="font-orbitron abyssal-text" style="font-size: 0.875rem; margin-top: 1.5rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--abyssal-purple);">Data Vault</h3>
+                            <h3 class="font-orbitron abyssal-text" style="font-size: 0.875rem; margin-top: 1.5rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Data Vault</h3>
                             <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem;">
                                 <button onclick="importData()" class="btn-secondary" style="width: 100%; font-size: 0.75rem; padding: 0.5rem 1rem;"><i class="fas fa-upload" style="margin-right: 0.25rem;"></i>Import</button>
                                 <button onclick="backupData()" class="btn-secondary" style="width: 100%; font-size: 0.75rem; padding: 0.5rem 1rem;"><i class="fas fa-download" style="margin-right: 0.25rem;"></i>Backup</button>
                             </div>
+                            
+                            <button onclick="generateSmartLink()" class="btn-secondary" style="width: 100%; font-size: 0.875rem; margin-top: 0.75rem;">
+                                <i class="fas fa-link" style="margin-right: 0.5rem;"></i>Generate Smart Link
+                            </button>
+                            
+                            <button onclick="showWhatsAppModal()" class="btn-secondary" style="width: 100%; font-size: 0.875rem; margin-top: 0.75rem;">
+                                <i class="fab fa-whatsapp" style="margin-right: 0.5rem;"></i>Generate WhatsApp Link
+                            </button>
 
-                            <h3 class="font-orbitron plasma-text" style="font-size: 0.875rem; margin-top: 1.5rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--plasma-blue);">Annihilation</h3>
+                            <h3 class="font-orbitron plasma-text" style="font-size: 0.875rem; margin-top: 1.5rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Annihilation</h3>
                             <button onclick="showConfirmationModal('Unleash total annihilation?', resetAllSettings)" class="btn-secondary" style="width: 100%; font-size: 0.875rem;">
                                 <i class="fas fa-skull-crossbones" style="margin-right: 0.5rem;"></i>Reset All
                             </button>
@@ -61,8 +469,9 @@
                     </div>
                 </div>
 
-                <!-- Mobile Menu Button --><div class="mobile-nav-toggle">
-                    <button id="mobile-menu-button" class="plasma-text" style="background: none; border: none; font-size: 2rem; cursor: pointer; outline: none; color: var(--plasma-blue);">
+                <!-- Mobile Menu Button -->
+                <div class="mobile-nav-toggle">
+                    <button id="mobile-menu-button" class="plasma-text" style="background: none; border: none; font-size: 2rem; cursor: pointer; outline: none;">
                         <i class="fas fa-skull-crossbones"></i>
                     </button>
                 </div>
@@ -70,86 +479,88 @@
         </div>
     </nav>
 
-    <!-- Mobile Menu --><div id="mobile-menu-overlay" class="fixed inset-0 z-50 hidden" onclick="closeMobileMenu()"></div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 z-50 hidden" onclick="closeMobileMenu()"></div>
     <div id="mobile-menu">
         <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 1rem; border-bottom: 1px solid rgba(0, 180, 216, 0.3);">
-            <span class="font-orbitron plasma-text" style="font-size: 1.125rem; color: var(--plasma-blue);">ABYSSAL FORGE</span>
+            <span class="font-orbitron plasma-text" style="font-size: 1.125rem;">ABYSSAL FORGE</span>
             <button onclick="closeMobileMenu()" style="background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--plasma-blue);">
                 <i class="fas fa-times"></i>
             </button>
         </div>
 
         <div style="flex-grow: 1; overflow-y: auto;">
-            <h3 class="font-orbitron abyssal-text" style="font-size: 0.875rem; margin-bottom: 0.75rem; margin-top: 1rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--abyssal-purple);">Portal</h3>
+            <h3 class="font-orbitron abyssal-text" style="font-size: 0.875rem; margin-bottom: 0.75rem; margin-top: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Portal</h3>
             <button onclick="showAddLinkModal(); closeMobileMenu();" class="btn-secondary" style="width: 100%; font-size: 0.875rem; margin-bottom: 1rem;">
                 <i class="fas fa-plus" style="margin-right: 0.5rem;"></i>Add Portal
             </button>
 
-            <h3 class="font-orbitron abyssal-text" style="font-size: 0.875rem; margin-top: 1rem; margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--abyssal-purple);">Data</h3>
-            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin-bottom: 1rem;">
+            <h3 class="font-orbitron abyssal-text" style="font-size: 0.875rem; margin-top: 1rem; margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em;">Data</h3>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin-bottom: 0.75rem;">
                 <button onclick="importData(); closeMobileMenu();" class="btn-secondary" style="width: 100%; font-size: 0.75rem; padding: 0.5rem 1rem;"><i class="fas fa-upload" style="margin-right: 0.25rem;"></i>Import</button>
                 <button onclick="backupData(); closeMobileMenu();" class="btn-secondary" style="width: 100%; font-size: 0.75rem; padding: 0.5rem 1rem;"><i class="fas fa-download" style="margin-right: 0.25rem;"></i>Backup</button>
             </div>
+            
+            <button onclick="generateSmartLink(); closeMobileMenu();" class="btn-secondary" style="width: 100%; font-size: 0.875rem; margin-bottom: 1rem;">
+                <i class="fas fa-link" style="margin-right: 0.5rem;"></i>Generate Smart Link
+            </button>
 
-            <h3 class="font-orbitron plasma-text" style="font-size: 0.875rem; margin-top: 1rem; margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--plasma-blue);">System</h3>
+            <button onclick="showWhatsAppModal(); closeMobileMenu();" class="btn-secondary" style="width: 100%; font-size: 0.875rem; margin-bottom: 1rem;">
+                <i class="fab fa-whatsapp" style="margin-right: 0.5rem;"></i>Generate WhatsApp Link
+            </button>
+
+            <h3 class="font-orbitron plasma-text" style="font-size: 0.875rem; margin-top: 1rem; margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em;">System</h3>
             <button onclick="showConfirmationModal('Unleash annihilation?', resetAllSettings); closeMobileMenu();" class="btn-secondary" style="width: 100%; font-size: 0.875rem; margin-bottom: 1rem;">
                 <i class="fas fa-skull-crossbones" style="margin-right: 0.5rem;"></i>Reset All
             </button>
         </div>
     </div>
 
-    <!-- Main Content --><main class="container content-layer" style="padding-top: 60px; padding-bottom: 2rem;">
+    <!-- Main Content -->
+    <main class="container content-layer" style="padding-top: 120px; padding-bottom: 2rem;">
+        
+        <!-- Profile Header -->
         <header style="text-align: center; margin-bottom: 3rem;">
-            <!-- Profile --><div class="profile">
-                <!-- Ganti img dengan video, tambahkan object-position --><video src="https://files.catbox.moe/kwq2bv.mp4" alt="Profile Video" autoplay loop muted playsinline
-                style="object-position: 50% 25%; will-change: transform;"> <!-- [DITAMBAHKAN] Memicu akselerasi GPU --></video>
-        </div>
-
-            <!-- Epic Title --><div style="display: inline-block; margin-bottom: 1.5rem;">
-                <!-- Diperbarui: Menghapus style inline, mengganti data-text dan inner text -->
-                <h1 class="font-orbitron glitch-effect plasma-text" data-text="THAMUZ THE ANNIHILATOR">THAMUZ THE ANNIHILATOR</h1>
+            <div class="profile">
+                <video src="https://files.catbox.moe/kwq2bv.mp4" alt="Profile Video" autoplay loop muted playsinline style="object-position: 50% 25%; will-change: transform;"></video>
             </div>
-            <p class="font-exo plasma-text" style="font-size: 1.125rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600;">MLBB Creator & Web Developer</p>
-            <p style="max-width: 42rem; margin: 1.5rem auto 0; font-size: 1rem; line-height: 1.6; color: rgba(0, 180, 216, 0.7);">
-            </p>
         </header>
 
-        <!-- Time Display --><div style="display: flex; justify-content: center; margin-bottom: 3rem;">
-            <div class="time-container" style="padding: 1.5rem 2rem; text-align: center;">
-                <div id="time" class="font-orbitron plasma-text" style="font-size: 2.5rem; font-weight: 700;">00:00:00</div>
-                <div id="date" class="font-orbitron abyssal-text" style="font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.5rem;">Loading...</div>
-            </div>
+        <!-- Portal Grid (Using ID from Code 1 for structure logic) -->
+        <div id="portals-grid">
+            <!-- Portal cards rendered by JS -->
         </div>
-
-        <!-- Portal Grid --><div id="portals-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
-            <!-- Portal cards rendered by JS --></div>
     </main>
 
-    <!-- Footer --><footer class="content-layer" style="text-align: center; color: #fff;">
-        <p class="font-orbitron" style="font-size: 0.875rem; opacity: 0.85;">© 2025 Created by Thamuz The Annihilator | All Rights Reserved</p>
+    <!-- Footer -->
+    <footer class="content-layer">
+        <p class="font-orbitron" style="font-size: 0.875rem; opacity: 0.85;">© 2026 Created by Thamuz The Annihilator | All Rights Reserved</p>
         <p class="plasma-text font-orbitron" style="font-size: 0.75rem; margin-top: 0.5rem;">Powered by Uranus Support Technology</p>
     </footer>
 
-    <!-- Add Portal Modal --><div id="add-portal-modal" class="fixed inset-0 flex items-center justify-center z-50 hidden modal-overlay" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; display: none; align-items: center; justify-content: center; z-index: 50;">
-        <div class="modal-content" style="max-width: 28rem; width: 100%; margin: 0 1.5rem; position: relative; padding: 2rem;">
-            <button onclick="document.getElementById('add-portal-modal').style.display = 'none'" style="position: absolute; top: 1rem; right: 1rem; font-size: 2rem; background: none; border: none; cursor: pointer; transition: all 0.3s;" class="plasma-text">×</button>
-            
+    <!-- Add Portal Modal -->
+    <div id="add-portal-modal" class="fixed inset-0 flex items-center justify-center z-50 hidden modal-overlay" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; display: none; align-items: center; justify-content: center; z-index: 50;">
+        <div class="modal-content">
+            <button onclick="document.getElementById('add-portal-modal').style.display = 'none'" style="position: absolute; top: 1rem; right: 1rem; font-size: 1.5rem; background: none; border: none; cursor: pointer; color: #fff;">
+                <i class="fas fa-times"></i>
+            </button>
             <h2 class="font-orbitron annihilator-text" style="font-size: 1.5rem; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">Forge New Portal</h2>
-
             <form id="portal-form" style="display: flex; flex-direction: column; gap: 1rem;">
                 <div>
-                    <label for="portal-name" class="font-orbitron plasma-text" style="display: block; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.875rem; letter-spacing: 0.05em;">Portal Name</label>
-                    <input type="text" id="portal-name" style="width: 100%; padding: 0.75rem; border-radius: 8px; font-size: 1rem;" placeholder="Enter portal name" required>
+                    <label for="portal-name" class="font-orbitron plasma-text" style="display: block; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em;">Portal Name</label>
+                    <input type="text" id="portal-name" placeholder="Enter portal name" required>
                 </div>
-
                 <div>
-                    <label for="portal-url" class="font-orbitron plasma-text" style="display: block; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.875rem; letter-spacing: 0.05em;">Destination URL</label>
-                    <input type="url" id="portal-url" style="width: 100%; padding: 0.75rem; border-radius: 8px; font-size: 1rem;" placeholder="https://your-link.com" required>
+                    <label for="portal-url" class="font-orbitron plasma-text" style="display: block; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em;">Destination URL</label>
+                    <input type="url" id="portal-url" placeholder="https://your-link.com" required>
                 </div>
-
                 <div>
-                    <label for="portal-icon" class="font-orbitron plasma-text" style="display: block; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.875rem; letter-spacing: 0.05em;">Portal Icon</label>
-                    <select id="portal-icon" style="width: 100%; padding: 0.75rem; border-radius: 8px; font-size: 1rem; appearance: none;">
+                    <label for="portal-password" class="font-orbitron plasma-text" style="display: block; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em;"><i class="fas fa-lock" style="margin-right: 4px;"></i> Protect with Password (Optional)</label>
+                    <input type="password" id="portal-password" placeholder="Leave empty for public access">
+                </div>
+                <div>
+                    <label for="portal-icon" class="font-orbitron plasma-text" style="display: block; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em;">Portal Icon</label>
+                    <select id="portal-icon" style="appearance: none;">
                         <option value="fas fa-skull-crossbones">💀 Skull</option>
                         <option value="fas fa-fire">🔥 Fire</option>
                         <option value="fas fa-bolt">⚡ Bolt</option>
@@ -166,53 +577,147 @@
                         <option value="fab fa-tiktok">🎵 TikTok</option>
                     </select>
                 </div>
-                
                 <div>
-                    <label for="portal-description" class="font-orbitron plasma-text" style="display: block; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.875rem; letter-spacing: 0.05em;">Description</label>
-                    <textarea id="portal-description" rows="2" style="width: 100%; padding: 0.75rem; border-radius: 8px; font-size: 1rem; resize: vertical;" placeholder="Brief description..."></textarea>
+                    <label for="portal-description" class="font-orbitron plasma-text" style="display: block; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em;">Description</label>
+                    <textarea id="portal-description" rows="2" placeholder="Brief description..."></textarea>
                 </div>
-
                 <div>
-                    <label class="font-orbitron plasma-text" style="display: block; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.875rem; letter-spacing: 0.05em;">Portal Theme</label>
+                    <label class="font-orbitron plasma-text" style="display: block; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em;">Portal Theme</label>
                     <div style="display: flex; justify-content: space-around; padding-top: 0.5rem;">
-                        <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; padding: 0.5rem; border-radius: 8px; transition: all 0.3s;">
+                        <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
                             <input type="radio" name="portal-color" value="#ff6a00" style="width: 1.25rem; height: 1.25rem; accent-color: var(--magma-orange);" checked>
-                            <span class="font-orbitron" style="font-weight: 700; color: var(--magma-orange);">Magma</span>
+                            <span class="font-orbitron" style="font-weight: 700; color: var(--magma-orange); font-size: 0.8rem;">Magma</span>
                         </label>
-                        <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; padding: 0.5rem; border-radius: 8px; transition: all 0.3s;">
+                        <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
                             <input type="radio" name="portal-color" value="#3a0ca3" style="width: 1.25rem; height: 1.25rem; accent-color: var(--abyssal-purple);">
-                            <span class="font-orbitron" style="font-weight: 700; color: var(--abyssal-purple);">Abyss</span>
+                            <span class="font-orbitron" style="font-weight: 700; color: var(--abyssal-purple); font-size: 0.8rem;">Abyss</span>
                         </label>
-                        <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; padding: 0.5rem; border-radius: 8px; transition: all 0.3s;">
+                        <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
                             <input type="radio" name="portal-color" value="#00b4d8" style="width: 1.25rem; height: 1.25rem; accent-color: var(--plasma-blue);">
-                            <span class="font-orbitron" style="font-weight: 700; color: var(--plasma-blue);">Plasma</span>
+                            <span class="font-orbitron" style="font-weight: 700; color: var(--plasma-blue); font-size: 0.8rem;">Plasma</span>
                         </label>
                     </div>
                 </div>
-
                 <div style="display: flex; justify-content: flex-end; gap: 0.75rem; padding-top: 0.5rem;">
-                    <button type="button" onclick="document.getElementById('add-portal-modal').style.display = 'none'" class="btn-secondary" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">
-                        Cancel
-                    </button>
-                    <button type="submit" class="btn-lava" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">
-                        Forge
-                    </button>
+                    <button type="button" onclick="document.getElementById('add-portal-modal').style.display = 'none'" class="btn-secondary">Cancel</button>
+                    <button type="submit" class="btn-lava">Forge</button>
                 </div>
             </form>
         </div>
     </div>
 
-    <!-- Confirmation Modal --><div id="confirmation-modal" class="fixed inset-0 flex items-center justify-center hidden modal-overlay" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; display: none; align-items: center; justify-content: center; z-index: 60;">
-        <div class="modal-content" style="max-width: 28rem; width: 100%; margin: 0 1rem; position: relative; padding: 2rem; text-align: center;">
+    <!-- Password Unlock Modal -->
+    <div id="password-modal" class="fixed inset-0 flex items-center justify-center z-50 hidden modal-overlay" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; display: none; align-items: center; justify-content: center; z-index: 55;">
+        <div class="modal-content" style="text-align: center;">
+            <div style="font-size: 2.5rem; color: var(--magma-orange); margin-bottom: 0.5rem;"><i class="fas fa-lock"></i></div>
+            <h2 class="font-orbitron plasma-text" style="margin-bottom: 1rem;">Portal Locked</h2>
+            <p style="margin-bottom: 1.5rem; font-size: 0.85rem; color: rgba(255,255,255,0.7);">Portal ini dilindungi sandi.</p>
+            <form onsubmit="event.preventDefault(); submitPassword();">
+                <input type="password" id="unlock-input" placeholder="Masukkan password..." style="text-align: center; margin-bottom: 1.5rem;" required>
+                <div style="display: flex; justify-content: center; gap: 1rem;">
+                    <button type="button" onclick="closePasswordModal()" class="btn-secondary">Batal</button>
+                    <button type="submit" class="btn-lava">Masuk</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- WhatsApp Link Modal -->
+    <div id="whatsapp-link-modal" class="fixed inset-0 flex items-center justify-center z-50 hidden modal-overlay" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; display: none; align-items: center; justify-content: center; z-index: 55;">
+        <div class="modal-content">
+            <button onclick="document.getElementById('whatsapp-link-modal').style.display = 'none'" class="btn-close-box"><i class="fas fa-times"></i></button>
+            <h2 class="font-orbitron plasma-text" style="margin-bottom: 1rem;">Generate WhatsApp Link</h2>
+            <form id="wa-form" onsubmit="event.preventDefault(); generateWhatsAppLink();">
+                <div>
+                    <label class="font-orbitron plasma-text" style="font-size: 0.8rem; margin-bottom: 0.5rem; display:block;">Nomor WhatsApp</label>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <select id="wa-country-code" style="width: 35%; min-width: 100px;"></select>
+                        <input type="tel" id="wa-number" placeholder="8123456789" style="flex-grow: 1;" required>
+                    </div>
+                    <p style="font-size: 0.7rem; color: rgba(255,255,255,0.5); margin-top: 4px; font-style: italic;">*Otomatis menghapus angka 0 di depan.</p>
+                </div>
+                <div style="margin-top: 1rem;">
+                    <label for="wa-message" class="font-orbitron plasma-text" style="font-size: 0.8rem; margin-bottom: 0.5rem; display:block;">Pesan</label>
+                    <textarea id="wa-message" rows="3" placeholder="Halo, saya ingin memesan..."></textarea>
+                </div>
+                <div style="margin-top: 1rem;">
+                    <button type="submit" class="btn-lava" style="width: 100%;">🚀 Generate Link</button>
+                </div>
+            </form>
+            <div id="wa-result-container" class="hidden-content" style="margin-top: 1.5rem; border-top: 1px solid rgba(0, 180, 216, 0.3); padding-top: 1rem;">
+                <label class="font-orbitron plasma-text" style="font-size: 0.8rem;">Link Result</label>
+                <input type="text" id="wa-result-link" readonly style="margin-bottom: 0.75rem; text-align: center;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+                    <button onclick="copyWaLink()" class="btn-secondary" style="font-size: 0.75rem; padding: 0.5rem;"><i class="fas fa-copy"></i> Copy Link</button>
+                    <button onclick="openWaLink()" class="btn-lava" style="font-size: 0.75rem; padding: 0.5rem;"><i class="fab fa-whatsapp"></i> Buka WA</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Smart Link Modal -->
+    <div id="smart-link-modal" class="fixed inset-0 flex items-center justify-center z-50 hidden modal-overlay" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; display: none; align-items: center; justify-content: center; z-index: 55;">
+        <div class="modal-content">
+            <button onclick="document.getElementById('smart-link-modal').style.display = 'none'" style="position: absolute; top: 1rem; right: 1rem; background:none; border:none; color:white; font-size:1.5rem; cursor:pointer;"><i class="fas fa-times"></i></button>
+            <h2 class="font-orbitron plasma-text" style="margin-bottom: 1rem;">Smart Link Ready <span style="display:inline-block; margin-left: 0.1em;">🚀</span></h2>
+            
+            <div id="capacity-container" style="margin-bottom: 1.5rem; background: rgba(0,0,0,0.5); padding: 1rem; border-radius: 8px; border: 1px solid rgba(0, 180, 216, 0.3);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                    <span style="font-family: 'Orbitron', sans-serif; font-size: 0.8rem; color: var(--plasma-blue);">Kapasitas Data</span>
+                    <span id="capacity-text" style="font-family: 'Inter', sans-serif; font-size: 0.8rem;">0%</span>
+                </div>
+                <div style="width: 100%; height: 6px; background: rgba(255,255,255,0.1); border-radius: 4px; overflow: hidden;">
+                    <div id="capacity-bar" style="width: 0%; height: 100%; background: var(--success-green); transition: width 0.6s ease;"></div>
+                </div>
+                <div style="display: flex; justify-content: flex-end; margin-top: 0.5rem;">
+                    <span id="capacity-detail" style="font-size: 0.7rem; color: rgba(255,255,255,0.6);">Menghitung...</span>
+                </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+                <div style="width: 100%;">
+                    <button id="btn-show-link" onclick="revealLink()" class="reveal-btn"><i class="fas fa-eye"></i> Tampilkan Link</button>
+                    <div id="link-content" class="hidden-content">
+                        <input type="text" id="generated-smart-link" readonly style="cursor: text; text-align: center; margin-bottom: 1rem;">
+                        <button onclick="copySmartLink()" class="btn-lava" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.5rem;"><i class="fas fa-copy"></i> Copy Smart Link</button>
+                    </div>
+                </div>
+                <div style="width: 100%;">
+                    <button id="btn-show-qr" onclick="revealQR()" class="reveal-btn"><i class="fas fa-qrcode"></i> Tampilkan QR Code</button>
+                    <div id="qr-content" class="hidden-content" style="text-align: center;">
+                        <div style="background: transparent; padding: 1rem; display: inline-block;">
+                            <canvas id="qr-canvas-display"></canvas>
+                        </div>
+                        <button onclick="downloadHighResQR()" class="btn-secondary" style="margin-top: 1rem; width: 100%;"><i class="fas fa-download"></i> Unduh QR 4K</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Limit Warning Modal -->
+    <div id="limit-warning-modal" class="fixed inset-0 flex items-center justify-center z-50 hidden modal-overlay" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; display: none; align-items: center; justify-content: center; z-index: 60;">
+        <div class="modal-content" style="text-align: center;">
+            <div style="font-size: 3rem; color: var(--magma-orange); margin-bottom: 1rem;"><i class="fas fa-exclamation-triangle"></i></div>
+            <h2 class="font-orbitron plasma-text" style="font-size: 1.4rem; margin-bottom: 1rem;">Kapasitas Maksimal ⚠️</h2>
+            <p style="margin-bottom: 1.5rem; font-size: 0.9rem; color: rgba(255, 255, 255, 0.9);">
+                Data portal Anda telah mencapai batas. Gunakan URL Shortener agar QR Code tetap bisa dipindai.
+            </p>
+            <div style="display: flex; gap: 0.5rem; justify-content: center; margin-bottom: 2rem; flex-wrap: wrap;">
+                <span class="shortener-badge">bit.ly</span><span class="shortener-badge">s.id</span><span class="shortener-badge">tinyurl.com</span>
+            </div>
+            <button onclick="document.getElementById('limit-warning-modal').style.display='none'" class="btn-lava">Mengerti & Perbaiki</button>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmation-modal" class="fixed inset-0 flex items-center justify-center hidden modal-overlay" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; display: none; align-items: center; justify-content: center; z-index: 60;">
+        <div class="modal-content" style="text-align: center;">
             <h2 class="font-orbitron plasma-text" style="font-size: 1.25rem; margin-bottom: 1rem; font-weight: 700;">Confirm Action</h2>
-            <p id="confirmation-message" style="margin-bottom: 1.5rem; font-size: 1.125rem; color: rgba(0, 180, 216, 0.8);">Are you sure?</p>
+            <p id="confirmation-message" style="margin-bottom: 1.5rem; font-size: 1rem; color: rgba(0, 180, 216, 0.8);">Are you sure?</p>
             <div style="display: flex; justify-content: center; gap: 1rem;">
-                <button id="confirm-cancel-btn" class="btn-secondary" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">
-                    Cancel
-                </button>
-                <button id="confirm-ok-btn" class="btn-lava" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">
-                    Confirm
-                </button>
+                <button id="confirm-cancel-btn" class="btn-secondary">Cancel</button>
+                <button id="confirm-ok-btn" class="btn-lava">Confirm</button>
             </div>
         </div>
     </div>
@@ -220,7 +725,544 @@
     <input type="file" id="import-file-input" class="hidden" style="display: none;" accept=".zip,.txt,application/json">
 
     <script>
-        const _0x4e43f5=_0x2ecd;function _0x4a56(){const _0x513420=['application/json','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h3\x20class=\x22font-cinzel\x22\x20style=\x22font-weight:\x20700;\x20text-transform:\x20uppercase;\x20letter-spacing:\x200.05em;\x20word-break:\x20break-word;\x20font-size:\x201.125rem;\x20margin-bottom:\x200.5rem;\x20','Buy\x20Bane\x20Lord\x20Of\x20Scalding\x20Seas','removeItem','target','constructor','Light\x20mode\x20locked\x20until\x20video\x20ends.','4weNDRg','logo-container','100%','bind','mobile-menu-overlay','deletePortalAction','createObjectURL','return\x20(function()\x20','none','exception','fas\x20fa-fire','Upgrade\x20sekarang\x20—\x20akses\x20semua\x20website\x20uranus\x20tanpa\x20iklan\x20cuma\x20Rp25K','\x22\x20target=\x22_blank\x22\x20style=\x22display:\x20block;\x20height:\x20100%;\x20padding:\x201.5rem;\x20text-align:\x20center;\x20position:\x20relative;\x20text-decoration:\x20none;\x20color:\x20inherit;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22position:\x20relative;\x20z-index:\x2010;\x20display:\x20flex;\x20flex-direction:\x20column;\x20align-items:\x20center;\x20justify-content:\x20center;\x20height:\x20100%;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','addEventListener','block','reload','innerWidth','uranusfazry_backup.zip','confirm-ok-btn','__proto__','http','result','2589687kUzFDV','search','description','setItem','confirm-cancel-btn','time','files','prototype','blob','\x22\x20style=\x22font-size:\x203rem;\x20margin-bottom:\x201rem;\x20','confirmation-message','style','getElementById','toLocaleDateString','DEFLATE','textContent','forEach','closeMobileMenu','import-file-input','backupData','reset','numeric','length','error','portal-description','createElement','.txt',';\x20border-color:\x20','189JHJlVi','toString','resetAllSettings','querySelector','showAddLinkModal','file','table','height','id-ID','Error\x20reading\x20ZIP:','1756744UtVzgI','open','(((.+)+)+)+$','add-portal-modal','portal-name','\x22\x20style=\x22margin:\x200\x20auto\x201rem;\x20height:\x203rem;\x20width:\x203rem;\x20object-fit:\x20contain;\x22\x20alt=\x22','submit','color:\x20','catch','Data\x20imported.\x20Page\x20will\x20reload.','310494itwMAt','3368645swynZh','overflow','<img\x20src=\x22','hidden','async','.mobile-nav-toggle','display','classList','en-GB','warn','portals-grid','light-mode','Autoplay\x20blocked:','long','Unsupported\x20file\x20type.','readAsText','38SaVuKK','removeChild','ended','portals','))\x22\x20class=\x22delete-btn\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22fas\x20fa-times\x22\x20style=\x22font-size:\x200.875rem;\x22></i>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</a>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','DOMContentLoaded','startsWith','parse','play','758530iMgilV','innerHTML','type','Failed\x20to\x20read\x20ZIP\x20file.','opacity','log','55773GkvHor','body','value','contains','url','remove','input[name=\x22portal-color\x22]:checked','Beli\x20kode\x20website\x20MLBB\x20Bane\x20Lord\x20Of\x20Scalding\x20Seas\x20edisi\x20premium\x20seharga\x20Rp100K','application/zip',';\x20text-shadow:\x200\x200\x2015px\x20','add','trace','bg-video','icon','{}.constructor(\x22return\x20this\x22)(\x20)','splice','\x20height:\x20100%;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<a\x20href=\x22','<i\x20class=\x22','8884890UCYxLJ','uranusfazry_backup.json','name','string','function','date','data:image','</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20onclick=\x22event.preventDefault();\x20event.stopPropagation();\x20showConfirmationModal(\x27Destroy\x20portal\x20','stringify','.desktop-nav','flex','importData','#ff7a18','#fcbf49','confirmation-modal','bg-image','portal-icon','getItem','Error\x20parsing\x20backup:','click','Backup\x20failed.','&nbsp;','mobile-menu','isArray','\x22></i>','Failed\x20to\x20parse\x20backup\x20file.','Bane\x20Premium\x20Access'];_0x4a56=function(){return _0x513420;};return _0x4a56();}(function(_0xad148d,_0x215da8){const _0x2bca30=_0x2ecd,_0x31565f=_0xad148d();while(!![]){try{const _0x2d3d34=parseInt(_0x2bca30(0x1ec))/0x1+parseInt(_0x2bca30(0x1e3))/0x2*(parseInt(_0x2bca30(0x1f2))/0x3)+-parseInt(_0x2bca30(0x226))/0x4*(parseInt(_0x2bca30(0x1d3))/0x5)+parseInt(_0x2bca30(0x1d2))/0x6*(parseInt(_0x2bca30(0x1be))/0x7)+parseInt(_0x2bca30(0x1c8))/0x8+-parseInt(_0x2bca30(0x23c))/0x9+-parseInt(_0x2bca30(0x204))/0xa;if(_0x2d3d34===_0x215da8)break;else _0x31565f['push'](_0x31565f['shift']());}catch(_0x216668){_0x31565f['push'](_0x31565f['shift']());}}}(_0x4a56,0xd6816));const _0x490e7f=(function(){let _0x45a948=!![];return function(_0x5e7019,_0xdee1c6){const _0x234ad1=_0x45a948?function(){if(_0xdee1c6){const _0x1fffdb=_0xdee1c6['apply'](_0x5e7019,arguments);return _0xdee1c6=null,_0x1fffdb;}}:function(){};return _0x45a948=![],_0x234ad1;};}()),_0x2bb5d1=_0x490e7f(this,function(){const _0x5c88ae=_0x2ecd;return _0x2bb5d1['toString']()[_0x5c88ae(0x23d)](_0x5c88ae(0x1ca))[_0x5c88ae(0x1bf)]()[_0x5c88ae(0x224)](_0x2bb5d1)[_0x5c88ae(0x23d)](_0x5c88ae(0x1ca));});function _0x2ecd(_0x94b4c1,_0x59022e){const _0x4ae69a=_0x4a56();return _0x2ecd=function(_0x54103a,_0x243855){_0x54103a=_0x54103a-0x1be;let _0x1230e0=_0x4ae69a[_0x54103a];return _0x1230e0;},_0x2ecd(_0x94b4c1,_0x59022e);}_0x2bb5d1();const _0x243855=(function(){let _0x5c8cbb=!![];return function(_0x8885c2,_0x5f60a5){const _0x5b823d=_0x5c8cbb?function(){if(_0x5f60a5){const _0x3c622b=_0x5f60a5['apply'](_0x8885c2,arguments);return _0x5f60a5=null,_0x3c622b;}}:function(){};return _0x5c8cbb=![],_0x5b823d;};}()),_0x54103a=_0x243855(this,function(){const _0x47070c=_0x2ecd;let _0x5d5a7e;try{const _0xbfe30e=Function(_0x47070c(0x22d)+_0x47070c(0x200)+');');_0x5d5a7e=_0xbfe30e();}catch(_0x4dc131){_0x5d5a7e=window;}const _0x134820=_0x5d5a7e['console']=_0x5d5a7e['console']||{},_0x29976e=[_0x47070c(0x1f1),'warn','info','error',_0x47070c(0x22f),_0x47070c(0x1c4),_0x47070c(0x1fd)];for(let _0xc24e25=0x0;_0xc24e25<_0x29976e[_0x47070c(0x252)];_0xc24e25++){const _0x215f10=_0x243855[_0x47070c(0x224)][_0x47070c(0x243)]['bind'](_0x243855),_0xea246a=_0x29976e[_0xc24e25],_0x38247c=_0x134820[_0xea246a]||_0x215f10;_0x215f10[_0x47070c(0x239)]=_0x243855['bind'](_0x243855),_0x215f10[_0x47070c(0x1bf)]=_0x38247c[_0x47070c(0x1bf)][_0x47070c(0x229)](_0x38247c),_0x134820[_0xea246a]=_0x215f10;}});_0x54103a(),document[_0x4e43f5(0x233)](_0x4e43f5(0x1e8),function(){const _0x102202=_0x4e43f5;let _0x305c15=![];const _0x3d3c32=document[_0x102202(0x248)](_0x102202(0x1fe)),_0x4b0ac6=document[_0x102202(0x248)](_0x102202(0x213));if(_0x3d3c32&&_0x4b0ac6){const _0x37f415=()=>{const _0x563942=_0x102202;_0x3d3c32['style']['opacity']='0',!document[_0x563942(0x1f3)][_0x563942(0x1da)][_0x563942(0x1f5)](_0x563942(0x1de))&&(_0x4b0ac6[_0x563942(0x247)][_0x563942(0x1f0)]='0.35'),_0x305c15=!![];},_0x257821=_0x4a5aff=>{const _0x564e18=_0x102202;console[_0x564e18(0x253)]('Video\x20background\x20failed:',_0x4a5aff),_0x37f415();};_0x3d3c32[_0x102202(0x233)](_0x102202(0x1e5),_0x37f415),_0x3d3c32[_0x102202(0x233)]('error',_0x257821);const _0x2d0201=_0x3d3c32[_0x102202(0x1eb)]();_0x2d0201!==undefined&&_0x2d0201[_0x102202(0x1d0)](_0x402f5e=>{const _0x557345=_0x102202;console[_0x557345(0x1dc)](_0x557345(0x1df),_0x402f5e),_0x37f415();});}const _0x50f17d=document[_0x102202(0x248)](_0x102202(0x227)),_0x4d5f67=document[_0x102202(0x248)](_0x102202(0x1dd)),_0x1097d5=document[_0x102202(0x248)]('portal-form'),_0xe468e8=document[_0x102202(0x248)]('mobile-menu-button'),_0x435fdf=document[_0x102202(0x248)](_0x102202(0x21a)),_0x7ffb62=document[_0x102202(0x248)](_0x102202(0x22a)),_0x22a8cb=document['getElementById'](_0x102202(0x241)),_0x2bbea9=document['getElementById'](_0x102202(0x209)),_0x5ecbfa=document[_0x102202(0x248)](_0x102202(0x24e)),_0x3995b9=document['getElementById'](_0x102202(0x212)),_0x8235db=document[_0x102202(0x248)](_0x102202(0x246)),_0x5e77f7=document[_0x102202(0x248)](_0x102202(0x238)),_0x1cac1c=document['getElementById'](_0x102202(0x240));let _0x5bff0e=[],_0x17b32=null;const _0x160b35=[{'name':_0x102202(0x21e),'url':'https://api.whatsapp.com/send/?phone=6287872521809&text=Halo%2C+saya+ingin+membeli+Akses+Website+Premium+Tanpa+Iklan+sebesar+Rp25.000.+Mohon+transfer+ke+DANA+087734421123+dan+kirimkan+bukti+pembayarannya.+Pesanan+akan+diproses+maksimal+1x24+jam.+Terima+kasih.&type=phone_number&app_absent=0','icon':'fas\x20fa-gem','color':_0x102202(0x211),'description':_0x102202(0x231)},{'name':_0x102202(0x221),'url':'https://api.whatsapp.com/send/?phone=6287872521809&text=Halo%2C+saya+ingin+membeli+Kode+Website+MLBB+Bane+Skin+Lord+Of+Scalding+Seas+sebesar+Rp100.000.+Mohon+transfer+ke+DANA+087734421123+dan+kirimkan+bukti+pembayarannya.+Pesanan+akan+diproses+maksimal+1x24+jam.+Terima+kasih.&type=phone_number&app_absent=0','icon':_0x102202(0x230),'color':_0x102202(0x210),'description':_0x102202(0x1f9)}];function _0x2faf36(){const _0x27e8ba=_0x102202;_0x5bff0e=JSON[_0x27e8ba(0x1ea)](localStorage[_0x27e8ba(0x215)](_0x27e8ba(0x1e6)))||_0x160b35,_0x4888f4(),_0x4d35ed(),setInterval(_0x4d35ed,0x3e8),_0x50f17d[_0x27e8ba(0x233)](_0x27e8ba(0x217),()=>{const _0x37d126=_0x27e8ba;if(!_0x305c15){console[_0x37d126(0x1f1)](_0x37d126(0x225));return;}document['body']['classList']['toggle']('light-mode'),!document['body'][_0x37d126(0x1da)][_0x37d126(0x1f5)](_0x37d126(0x1de))&&_0x3d3c32[_0x37d126(0x247)][_0x37d126(0x1f0)]==='0'&&(_0x4b0ac6[_0x37d126(0x247)]['opacity']='0.35');}),_0xe468e8[_0x27e8ba(0x233)]('click',()=>{const _0x27cd7b=_0x27e8ba;_0x435fdf[_0x27cd7b(0x1da)][_0x27cd7b(0x1fc)](_0x27cd7b(0x1c9)),_0x7ffb62[_0x27cd7b(0x1da)][_0x27cd7b(0x1f7)](_0x27cd7b(0x1d6)),_0x7ffb62[_0x27cd7b(0x247)][_0x27cd7b(0x1d9)]=_0x27cd7b(0x234),document[_0x27cd7b(0x1f3)][_0x27cd7b(0x247)][_0x27cd7b(0x1d4)]=_0x27cd7b(0x1d6);}),_0x7ffb62[_0x27e8ba(0x233)]('click',closeMobileMenu),_0x1097d5[_0x27e8ba(0x233)](_0x27e8ba(0x1ce),_0x5c4b04),_0x5ecbfa[_0x27e8ba(0x233)]('change',_0x45e534),_0x1cac1c['addEventListener'](_0x27e8ba(0x217),()=>{const _0x12d53e=_0x27e8ba;_0x3995b9[_0x12d53e(0x1da)][_0x12d53e(0x1fc)](_0x12d53e(0x1d6)),_0x3995b9[_0x12d53e(0x247)]['display']='none';}),_0x5e77f7['addEventListener'](_0x27e8ba(0x217),()=>{const _0x1a8a1d=_0x27e8ba;typeof _0x17b32===_0x1a8a1d(0x208)&&_0x17b32(),_0x3995b9[_0x1a8a1d(0x1da)][_0x1a8a1d(0x1fc)]('hidden'),_0x3995b9[_0x1a8a1d(0x247)]['display']=_0x1a8a1d(0x22e),_0x17b32=null;}),window[_0x27e8ba(0x233)]('resize',_0x4ebf3a),_0x4ebf3a();}function _0x4ebf3a(){const _0x40ccb1=_0x102202,_0x12bd8a=document[_0x40ccb1(0x1c1)](_0x40ccb1(0x20d)),_0x565f09=document['querySelector'](_0x40ccb1(0x1d8));if(window[_0x40ccb1(0x236)]>=0x300){if(_0x12bd8a)_0x12bd8a['style']['display']=_0x40ccb1(0x234);if(_0x565f09)_0x565f09[_0x40ccb1(0x247)][_0x40ccb1(0x1d9)]='none';}else{if(_0x12bd8a)_0x12bd8a[_0x40ccb1(0x247)]['display']=_0x40ccb1(0x22e);if(_0x565f09)_0x565f09[_0x40ccb1(0x247)][_0x40ccb1(0x1d9)]=_0x40ccb1(0x234);}}window[_0x102202(0x24d)]=function(){const _0x2b6d90=_0x102202;_0x435fdf[_0x2b6d90(0x1da)]['remove']('open'),_0x7ffb62[_0x2b6d90(0x1da)][_0x2b6d90(0x1fc)](_0x2b6d90(0x1d6)),_0x7ffb62[_0x2b6d90(0x247)][_0x2b6d90(0x1d9)]='none',document['body'][_0x2b6d90(0x247)][_0x2b6d90(0x1d4)]='';},window['showConfirmationModal']=function(_0x3ffe7e,_0x580add){const _0x3042dd=_0x102202;_0x8235db[_0x3042dd(0x24b)]=_0x3ffe7e,_0x17b32=_0x580add,_0x3995b9[_0x3042dd(0x1da)][_0x3042dd(0x1f7)](_0x3042dd(0x1d6)),_0x3995b9[_0x3042dd(0x247)][_0x3042dd(0x1d9)]='flex';};function _0x4888f4(){const _0x42aecc=_0x102202;_0x4d5f67[_0x42aecc(0x1ed)]='',_0x5bff0e[_0x42aecc(0x24c)]((_0x232f5e,_0x29996b)=>{const _0x178d08=_0x42aecc,_0x167600=document[_0x178d08(0x255)]('div');_0x167600[_0x178d08(0x247)][_0x178d08(0x1c5)]=_0x178d08(0x228);const _0x3cb8f9=_0x232f5e['color']||_0x178d08(0x210),_0x13f4ac=_0x178d08(0x1cf)+_0x3cb8f9+_0x178d08(0x257)+_0x3cb8f9+';',_0x46e0f8=_0x178d08(0x1cf)+_0x3cb8f9+_0x178d08(0x1fb)+_0x3cb8f9+';';let _0x594cb3=_0x232f5e[_0x178d08(0x1ff)]||'fas\x20fa-fire';(!_0x232f5e[_0x178d08(0x1ff)]||!_0x232f5e[_0x178d08(0x1ff)]['startsWith']('fa')&&!_0x232f5e['icon'][_0x178d08(0x1e9)](_0x178d08(0x23a))&&!_0x232f5e[_0x178d08(0x1ff)][_0x178d08(0x1e9)](_0x178d08(0x20a)))&&(_0x594cb3=_0x178d08(0x230));const _0x1cd5eb=_0x594cb3[_0x178d08(0x1e9)](_0x178d08(0x20a))||_0x594cb3[_0x178d08(0x1e9)](_0x178d08(0x23a))?_0x178d08(0x1d5)+_0x594cb3+_0x178d08(0x1cd)+_0x232f5e['name']+'\x20icon\x22\x20onerror=\x22this.style.display=\x27none\x27;\x20this.nextSibling.style.display=\x27block\x27;\x22><i\x20class=\x22fas\x20fa-fire\x22\x20style=\x22font-size:\x203rem;\x20margin-bottom:\x201rem;\x20display:\x20none;\x20'+_0x46e0f8+_0x178d08(0x21c):_0x178d08(0x203)+_0x594cb3+_0x178d08(0x245)+_0x46e0f8+_0x178d08(0x21c),_0x4f5792=_0x232f5e[_0x178d08(0x23e)]?_0x232f5e['description']:_0x178d08(0x219);_0x167600[_0x178d08(0x1ed)]='\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22portal-card\x22\x20style=\x22'+_0x13f4ac+_0x178d08(0x202)+_0x232f5e[_0x178d08(0x1f6)]+_0x178d08(0x232)+_0x1cd5eb+_0x178d08(0x220)+_0x46e0f8+'\x22>'+_0x232f5e[_0x178d08(0x206)]+'</h3>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20style=\x22font-size:\x200.875rem;\x20color:\x20rgba(252,\x20191,\x2073,\x200.8);\x20margin-top:\x200.5rem;\x20line-height:\x201.4;\x22>'+_0x4f5792+_0x178d08(0x20b)+_0x232f5e[_0x178d08(0x206)]+'?\x27,\x20()\x20=>\x20deletePortalAction('+_0x29996b+_0x178d08(0x1e7),_0x4d5f67['appendChild'](_0x167600);});}function _0x5c4b04(_0x21a2ab){const _0x22c6c3=_0x102202;_0x21a2ab['preventDefault']();const _0x5b0d1e=document[_0x22c6c3(0x248)](_0x22c6c3(0x1cc))[_0x22c6c3(0x1f4)],_0x258b34=document['getElementById']('portal-url')[_0x22c6c3(0x1f4)]||'#',_0x193f32=document[_0x22c6c3(0x248)](_0x22c6c3(0x254))['value']||'',_0x7666be=document[_0x22c6c3(0x248)](_0x22c6c3(0x214))[_0x22c6c3(0x1f4)],_0x63727f=document[_0x22c6c3(0x1c1)](_0x22c6c3(0x1f8))[_0x22c6c3(0x1f4)];_0xd96c14(_0x5b0d1e,_0x258b34,_0x7666be,_0x63727f,_0x193f32);}function _0xd96c14(_0x1e0f80,_0x59cbf2,_0x3e963b,_0x12e12b,_0xf0c275){const _0xd00ea9=_0x102202;_0x5bff0e['push']({'name':_0x1e0f80,'url':_0x59cbf2,'icon':_0x3e963b,'color':_0x12e12b,'description':_0xf0c275}),_0x177655(),_0x4888f4(),document['getElementById'](_0xd00ea9(0x1cb))['classList'][_0xd00ea9(0x1fc)]('hidden'),document['getElementById'](_0xd00ea9(0x1cb))[_0xd00ea9(0x247)][_0xd00ea9(0x1d9)]=_0xd00ea9(0x22e),_0x2fb24f();}window[_0x102202(0x22b)]=function(_0x1d77cb){const _0x5c7ca7=_0x102202;_0x5bff0e[_0x5c7ca7(0x201)](_0x1d77cb,0x1),_0x177655(),_0x4888f4();};function _0x2fb24f(){const _0x38ac28=_0x102202;_0x1097d5[_0x38ac28(0x250)]();}function _0x177655(){const _0x4f55b6=_0x102202;localStorage[_0x4f55b6(0x23f)](_0x4f55b6(0x1e6),JSON[_0x4f55b6(0x20c)](_0x5bff0e));}window[_0x102202(0x1c2)]=function(){const _0x5af582=_0x102202;document[_0x5af582(0x248)](_0x5af582(0x1cb))[_0x5af582(0x1da)][_0x5af582(0x1f7)]('hidden'),document[_0x5af582(0x248)](_0x5af582(0x1cb))[_0x5af582(0x247)][_0x5af582(0x1d9)]=_0x5af582(0x20e),_0x2fb24f(),_0x435fdf[_0x5af582(0x1da)][_0x5af582(0x1f5)](_0x5af582(0x1c9))&&closeMobileMenu();};function _0x4d35ed(){const _0x51d1f8=_0x102202,_0x39d785=new Date();_0x22a8cb[_0x51d1f8(0x24b)]=_0x39d785['toLocaleTimeString'](_0x51d1f8(0x1db)),_0x2bbea9[_0x51d1f8(0x24b)]=_0x39d785[_0x51d1f8(0x249)](_0x51d1f8(0x1c6),{'weekday':_0x51d1f8(0x1e0),'year':_0x51d1f8(0x251),'month':_0x51d1f8(0x1e0),'day':'numeric'});}window[_0x102202(0x1c0)]=function(){const _0x38b2ba=_0x102202;localStorage[_0x38b2ba(0x222)](_0x38b2ba(0x1e6)),location[_0x38b2ba(0x235)]();},window[_0x102202(0x24f)]=async()=>{const _0xb9738a=_0x102202,_0x4d78d2={'portals':JSON['parse'](localStorage[_0xb9738a(0x215)](_0xb9738a(0x1e6)))||_0x160b35},_0x1933e5=JSON[_0xb9738a(0x20c)](_0x4d78d2,null,0x2);try{const _0x1abda2=new JSZip();_0x1abda2[_0xb9738a(0x1c3)](_0xb9738a(0x205),_0x1933e5);const _0x210347=await _0x1abda2['generateAsync']({'type':_0xb9738a(0x244),'compression':_0xb9738a(0x24a)}),_0x304888=URL[_0xb9738a(0x22c)](_0x210347),_0x1f205b=document[_0xb9738a(0x255)]('a');_0x1f205b['href']=_0x304888,_0x1f205b['download']=_0xb9738a(0x237),document['body']['appendChild'](_0x1f205b),_0x1f205b['click'](),document['body'][_0xb9738a(0x1e4)](_0x1f205b),URL['revokeObjectURL'](_0x304888);}catch(_0x20d7f2){console['error']('Error\x20creating\x20ZIP:',_0x20d7f2),alert(_0xb9738a(0x218));}},window[_0x102202(0x20f)]=()=>{const _0x29517b=_0x102202;_0x5ecbfa[_0x29517b(0x217)]();};async function _0x45e534(_0x1c36ff){const _0x101e3f=_0x102202,_0x5a70b6=_0x1c36ff[_0x101e3f(0x223)][_0x101e3f(0x242)][0x0];if(!_0x5a70b6)return;if(_0x5a70b6[_0x101e3f(0x1ee)]===_0x101e3f(0x1fa)||_0x5a70b6[_0x101e3f(0x206)]['endsWith']('.zip')){const _0x366637=new FileReader();_0x366637['onload']=async _0x12e49a=>{const _0x11804b=_0x101e3f;try{const _0x3bbce3=await JSZip['loadAsync'](_0x12e49a[_0x11804b(0x223)]['result']),_0x2e487f=_0x3bbce3['file']('uranusfazry_backup.json');if(_0x2e487f){const _0x5e0e9f=await _0x2e487f[_0x11804b(0x1d7)](_0x11804b(0x207));await _0x5b32d9(_0x5e0e9f);}else alert('Invalid\x20ZIP\x20file.');}catch(_0x628e75){console[_0x11804b(0x253)](_0x11804b(0x1c7),_0x628e75),alert(_0x11804b(0x1ef));}},_0x366637['readAsArrayBuffer'](_0x5a70b6);}else{if(_0x5a70b6[_0x101e3f(0x1ee)]==='text/plain'||_0x5a70b6[_0x101e3f(0x1ee)]===_0x101e3f(0x21f)||_0x5a70b6[_0x101e3f(0x206)]['endsWith'](_0x101e3f(0x256))){const _0x7ff88d=new FileReader();_0x7ff88d['onload']=async _0x1a3b29=>{const _0x57a8dd=_0x101e3f;await _0x5b32d9(_0x1a3b29[_0x57a8dd(0x223)][_0x57a8dd(0x23b)]);},_0x7ff88d[_0x101e3f(0x1e2)](_0x5a70b6);}else alert(_0x101e3f(0x1e1));}_0x1c36ff[_0x101e3f(0x223)][_0x101e3f(0x1f4)]='';}async function _0x5b32d9(_0x3244e2){const _0x33ca8c=_0x102202;try{const _0x4db6e7=JSON[_0x33ca8c(0x1ea)](_0x3244e2);_0x4db6e7&&Array[_0x33ca8c(0x21b)](_0x4db6e7['portals'])?(localStorage[_0x33ca8c(0x23f)](_0x33ca8c(0x1e6),JSON[_0x33ca8c(0x20c)](_0x4db6e7['portals'])),showConfirmationModal(_0x33ca8c(0x1d1),()=>{const _0x1a3f23=_0x33ca8c;location[_0x1a3f23(0x235)]();})):alert('Invalid\x20backup\x20format.');}catch(_0x40a3af){console['error'](_0x33ca8c(0x216),_0x40a3af),alert(_0x33ca8c(0x21d));}}_0x2faf36();});
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- KONFIGURASI BATAS DATA ---
+            const MAX_QR_LENGTH = 2900; 
+
+            // --- VIDEO BACKGROUND LOGIC (CODE KEDUA) ---
+            let isVideoFinished = false;
+            const bgVideo = document.getElementById('bg-video');
+            const bgImage = document.getElementById('bg-image');
+
+            if (bgVideo && bgImage) {
+                const handleVideoEnd = () => {
+                    bgVideo.style.opacity = '0';
+                    if (!document.body.classList.contains('light-mode')) {
+                        bgImage.style.opacity = '0.35';
+                    }
+                    isVideoFinished = true;
+                };
+
+                const handleVideoError = (e) => {
+                    console.error("Video background failed:", e);
+                    handleVideoEnd();
+                };
+                
+                bgVideo.addEventListener('ended', handleVideoEnd);
+                bgVideo.addEventListener('error', handleVideoError);
+
+                const playPromise = bgVideo.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(error => {
+                        console.warn("Autoplay blocked:", error);
+                        handleVideoEnd();
+                    });
+                }
+            }
+
+            // --- DOM ELEMENTS ---
+            const logoContainer = document.getElementById('logo-container');
+            const portalsGrid = document.getElementById('portals-grid');
+            const portalForm = document.getElementById('portal-form');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+            const importFileInput = document.getElementById('import-file-input');
+            const confirmationModal = document.getElementById('confirmation-modal');
+            const confirmationMessage = document.getElementById('confirmation-message');
+            const confirmOkBtn = document.getElementById('confirm-ok-btn');
+            const confirmCancelBtn = document.getElementById('confirm-cancel-btn');
+            const notifContainer = document.getElementById('notif-container');
+
+            let portals = [];
+            let onConfirmCallback = null;
+            let currentGeneratedUrl = "";
+            let countdownInterval;
+
+            // --- PROFESSIONAL NOTIFICATION SYSTEM (ADAPTED STYLE) ---
+            window.showNotification = function(title, message, type = 'success') {
+                const toast = document.createElement('div');
+                toast.className = `notif-toast ${type}`;
+                const iconClass = type === 'success' ? 'fa-check' : 'fa-exclamation-triangle';
+                toast.innerHTML = `
+                    <div class="notif-icon"><i class="fas ${iconClass}"></i></div>
+                    <div class="notif-content"><h4 class="notif-title">${title}</h4><p class="notif-message">${message}</p></div>
+                    <button class="notif-close" onclick="this.parentElement.remove()">&times;</button>
+                    <div class="notif-progress"></div>
+                `;
+                notifContainer.appendChild(toast);
+                requestAnimationFrame(() => { toast.classList.add('show'); });
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                    toast.addEventListener('transitionend', () => { if (toast.parentElement) toast.remove(); });
+                }, 4000);
+            };
+
+            // --- V5 COMPRESSION ENGINE ---
+            const SEP_ITEM = '\x01'; const SEP_FIELD = '\x02';
+            const TOKEN_MAP = [["https://api.whatsapp.com/send/?phone=", "*w"], ["https://", "*h"], ["http://", "*H"], [".com", "*c"], [".vercel.app", "*v"], ["&text=", "*t"], ["%20", "*s"], ["fas fa-", "*f"], ["fab fa-", "*b"], ["#ff6a00", "*1"], ["#3a0ca3", "*2"], ["#00b4d8", "*3"], [" ", "_"]];
+            const UrlManager = {
+                tokenize(str) { TOKEN_MAP.forEach(([from, to]) => { str = str.split(from).join(to); }); return str; },
+                detokenize(str) { [...TOKEN_MAP].reverse().forEach(([from, to]) => { str = str.split(to).join(from); }); return str; },
+                serialize(portals) { return portals.map(p => [p.name, p.url, p.icon, p.color, p.description || "", p.password || ""].join(SEP_FIELD)).join(SEP_ITEM); },
+                deserialize(str) { if (!str) return []; return str.split(SEP_ITEM).map(itemStr => { const parts = itemStr.split(SEP_FIELD); return { name: parts[0], url: parts[1], icon: parts[2], color: parts[3], description: parts[4] || "", password: parts[5] || null }; }); },
+                encode(portals) { try { let raw = UrlManager.serialize(portals); raw = UrlManager.tokenize(raw); let compressed = LZString.compressToBase64(raw); return compressed.replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, ""); } catch (e) { console.error("Encode Error", e); return null; } },
+                decode(encoded) { try { let b64 = encoded.replace(/-/g, "+").replace(/_/g, "/"); while (b64.length % 4 !== 0) b64 += "="; let raw = LZString.decompressFromBase64(b64); if (!raw) return null; raw = UrlManager.detokenize(raw); return UrlManager.deserialize(raw); } catch (e) { console.error("Decode Error", e); return null; } },
+                load(payload) { if (payload.startsWith("v5_")) return UrlManager.decode(payload.slice(3)); if (payload.startsWith("v4:") || payload.startsWith("id:")) { window.showNotification('Format Lama', 'Terdeteksi link versi lama.', 'error'); return null; } const legacy = LZString.decompressFromEncodedURIComponent(payload); if (legacy && legacy.startsWith("[")) return JSON.parse(legacy); return null; }
+            };
+
+            const defaultPortals = [
+                {
+                    name: 'Thamuz Premium Access',
+                    url: 'https://api.whatsapp.com/send/?phone=6287872521809&text=Halo%2C+saya+ingin+membeli+Akses+Website+Premium+Tanpa+Iklan+sebesar+Rp25.000.+Mohon+transfer+ke+DANA+087734421123+dan+kirimkan+bukti+pembayarannya.+Pesanan+akan+diproses+maksimal+1x24+jam.+Terima+kasih.&type=phone_number&app_absent=0',
+                    icon: 'fas fa-gem',
+                    color: '#00b4d8',
+                    description: 'Upgrade sekarang — akses semua website uranus tanpa iklan cuma Rp25K'
+                },
+                {
+                    name: 'Buy Thamuz Annihilator Code',
+                    url: 'https://api.whatsapp.com/send/?phone=6287872521809&text=Halo%2C+saya+ingin+membeli+Kode+Website+MLBB+Thamuz+The+Annihilator+sebesar+Rp100.000.+Mohon+transfer+ke+DANA+087734421123+dan+kirimkan+bukti+pembayarannya.+Pesanan+akan+diproses+maksimal+1x24+jam.+Terima+kasih.&type=phone_number&app_absent=0',
+                    icon: 'fas fa-fire',
+                    color: '#ff6a00',
+                    description: 'Beli kode website MLBB Thamuz The Annihilator edisi premium seharga Rp100K'
+                },
+                {
+                    name: 'Uranus Store',
+                    url: 'https://trakteer.id/uranusfazry/shop',
+                    icon: 'fas fa-star',
+                    color: '#7209b7',
+                    description: 'Kunjungi store resmi kami untuk promo terbaru'
+                }
+            ];
+
+            // --- APP INITIALIZATION ---
+            function initPortalApp() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const encodedData = urlParams.get('p');
+                if (encodedData) {
+                    const decodedPortals = UrlManager.load(encodedData);
+                    if (decodedPortals) {
+                        portals = decodedPortals;
+                        localStorage.setItem('portals', JSON.stringify(portals));
+                        window.history.replaceState({}, document.title, window.location.pathname);
+                        renderPortals();
+                        window.showNotification('Data Loaded', 'Portal berhasil dimuat dari link.', 'success');
+                    } else loadFromStorage();
+                } else loadFromStorage();
+                setupEventListeners();
+                updateNavDisplay();
+                populateCountries(); 
+            }
+
+            function loadFromStorage() {
+                portals = JSON.parse(localStorage.getItem('portals')) || defaultPortals;
+                renderPortals();
+            }
+
+            function setupEventListeners() {
+                logoContainer.addEventListener('click', () => {
+                    if (!isVideoFinished) return;
+                    document.body.classList.toggle('light-mode');
+                    if (!document.body.classList.contains('light-mode') && bgVideo.style.opacity === '0') bgImage.style.opacity = '0.35';
+                    const mode = document.body.classList.contains('light-mode') ? 'Light Mode' : 'Abyss Mode';
+                    window.showNotification('Theme Changed', `Mode tampilan diubah ke ${mode}.`, 'success');
+                });
+                
+                // Fix Mobile Menu Logic for Thamuz Theme
+                mobileMenuButton.addEventListener('click', () => { 
+                    mobileMenu.classList.add('open'); 
+                    mobileMenuOverlay.classList.remove('hidden'); 
+                    mobileMenuOverlay.style.display = 'block'; 
+                    document.body.style.overflow = 'hidden'; 
+                });
+                mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+                
+                portalForm.addEventListener('submit', handlePortalFormSubmit);
+                importFileInput.addEventListener('change', handleFileImport);
+                confirmCancelBtn.addEventListener('click', () => { confirmationModal.classList.add('hidden'); confirmationModal.style.display = 'none'; });
+                confirmOkBtn.addEventListener('click', () => { if (typeof onConfirmCallback === 'function') onConfirmCallback(); confirmationModal.classList.add('hidden'); confirmationModal.style.display = 'none'; onConfirmCallback = null; });
+                window.addEventListener('resize', updateNavDisplay);
+            }
+
+            function updateNavDisplay() {
+                const desktopNav = document.querySelector('.desktop-nav');
+                const mobileToggle = document.querySelector('.mobile-nav-toggle');
+                if (window.innerWidth >= 768) { if (desktopNav) desktopNav.style.display = 'block'; if (mobileToggle) mobileToggle.style.display = 'none'; }
+                else { if (desktopNav) desktopNav.style.display = 'none'; if (mobileToggle) mobileToggle.style.display = 'block'; }
+            }
+
+            window.closeMobileMenu = function() {
+                mobileMenu.classList.remove('open'); mobileMenuOverlay.classList.add('hidden'); mobileMenuOverlay.style.display = 'none'; document.body.style.overflow = '';
+            }
+
+            window.showConfirmationModal = function(message, callback) {
+                confirmationMessage.textContent = message; onConfirmCallback = callback; confirmationModal.classList.remove('hidden'); confirmationModal.style.display = 'flex';
+            }
+
+            // --- PORTAL RENDERING & PASSWORD LOGIC ---
+            function renderPortals() {
+                portalsGrid.innerHTML = '';
+                portals.forEach((portal, index) => {
+                    const portalElement = document.createElement('div');
+                    portalElement.style.height = '100%';
+                    const portalColor = portal.color || '#ff6a00';
+                    const isLocked = portal.password && portal.password.trim() !== "";
+                    
+                    let iconClass = portal.icon || 'fas fa-skull-crossbones';
+                    if (!portal.icon || (!portal.icon.startsWith('fa') && !portal.icon.startsWith('http') && !portal.icon.startsWith('data:image'))) iconClass = 'fas fa-skull-crossbones';
+                    
+                    const iconHtml = (iconClass.startsWith('data:image') || iconClass.startsWith('http'))
+                        ? `<img src="${iconClass}" style="margin: 0 auto 1rem; height: 3rem; width: 3rem; object-fit: contain;" alt="${portal.name} icon" onerror="this.style.display='none'; this.nextSibling.style.display='block';"><i class="fas fa-skull-crossbones" style="font-size: 3rem; margin-bottom: 1rem; display: none; color: ${portalColor};"></i>`
+                        : `<i class="${iconClass}" style="font-size: 3rem; margin-bottom: 1rem; color: ${portalColor};"></i>`;
+                        
+                    const descriptionHtml = portal.description ? portal.description : '&nbsp;';
+                    const lockIconHtml = isLocked ? `<div class="lock-indicator"><i class="fas fa-lock"></i></div>` : '';
+                    const clickAction = `onclick="handlePortalClick(event, ${index})"`;
+                    
+                    // Style override to match Thamuz theme specifically
+                    portalElement.innerHTML = `
+                    <div class="portal-card" style="color: ${portalColor}; border-color: ${portalColor}; height: 100%;" ${clickAction}>
+                        ${lockIconHtml}
+                        <div style="display: block; height: 100%; padding: 1.5rem; text-align: center; position: relative; text-decoration: none; color: inherit;">
+                            <div style="position: relative; z-index: 10; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
+                                ${iconHtml}
+                                <h3 class="font-orbitron" style="font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; word-break: break-word; font-size: 1.125rem; margin-bottom: 0.5rem; color: ${portalColor};">${portal.name}</h3>
+                                <p style="font-size: 0.875rem; color: rgba(0, 180, 216, 0.7); margin-top: 0.5rem; line-height: 1.4;">${descriptionHtml}</p>
+                            </div>
+                            <button onclick="event.stopPropagation(); showConfirmationModal('Annihilate portal ${portal.name}?', () => deletePortalAction(${index}))" class="delete-btn">
+                                <i class="fas fa-times" style="font-size: 0.875rem;"></i>
+                            </button>
+                        </div>
+                    </div>`;
+                    
+                    portalsGrid.appendChild(portalElement);
+                });
+            }
+
+            let currentUnlockIndex = -1;
+
+            window.handlePortalClick = function(event, index) {
+                event.preventDefault();
+                const portal = portals[index];
+                if (portal.password && portal.password.trim() !== "") {
+                    currentUnlockIndex = index; openPasswordModal();
+                } else {
+                    window.open(portal.url, '_blank');
+                }
+            }
+
+            window.openPasswordModal = function() {
+                const modal = document.getElementById('password-modal'); modal.classList.remove('hidden'); modal.style.display = 'flex';
+                document.getElementById('unlock-input').value = ''; document.getElementById('unlock-input').focus();
+            }
+
+            window.closePasswordModal = function() {
+                const modal = document.getElementById('password-modal'); modal.classList.add('hidden'); modal.style.display = 'none'; currentUnlockIndex = -1;
+            }
+
+            window.submitPassword = function() {
+                if (currentUnlockIndex === -1) return;
+                const input = document.getElementById('unlock-input').value;
+                const portal = portals[currentUnlockIndex];
+                if (btoa(input) === portal.password) {
+                    closePasswordModal(); window.open(portal.url, '_blank');
+                } else {
+                    window.showNotification("Salah!", "Password tidak cocok.", "error");
+                }
+            }
+
+            function handlePortalFormSubmit(e) { 
+                e.preventDefault(); 
+                const name = document.getElementById('portal-name').value; 
+                const url = document.getElementById('portal-url').value || "#"; 
+                const description = document.getElementById('portal-description').value || ""; 
+                const icon = document.getElementById('portal-icon').value; 
+                const color = document.querySelector('input[name="portal-color"]:checked').value; 
+                const passwordInput = document.getElementById('portal-password').value;
+                const password = passwordInput ? btoa(passwordInput) : ""; 
+
+                addPortalToArray(name, url, icon, color, description, password); 
+            }
+
+            function addPortalToArray(name, url, icon, color, description, password) { 
+                portals.push({ name, url, icon, color, description, password }); 
+                savePortals(); renderPortals(); 
+                document.getElementById('add-portal-modal').classList.add('hidden'); 
+                document.getElementById('add-portal-modal').style.display = 'none'; 
+                resetPortalForm(); 
+                window.showNotification('Success', 'Portal baru berhasil ditempa!', 'success'); 
+            }
+
+            window.deletePortalAction = function(index) { portals.splice(index, 1); savePortals(); renderPortals(); window.showNotification('Deleted', 'Portal berhasil dihapus.', 'success'); }
+            function resetPortalForm() { portalForm.reset(); }
+            function savePortals() { localStorage.setItem('portals', JSON.stringify(portals)); }
+            window.showAddLinkModal = function() { document.getElementById('add-portal-modal').classList.remove('hidden'); document.getElementById('add-portal-modal').style.display = 'flex'; resetPortalForm(); if (mobileMenu.classList.contains('open')) closeMobileMenu(); }
+            window.resetAllSettings = function() { localStorage.removeItem('portals'); location.href = window.location.pathname; }
+
+            window.revealLink = function() {
+                document.getElementById('btn-show-link').style.display = 'none'; document.getElementById('link-content').style.display = 'block'; document.getElementById('capacity-container').classList.add('hide-capacity');
+            }
+
+            window.revealQR = function() {
+                document.getElementById('btn-show-qr').style.display = 'none'; document.getElementById('qr-content').style.display = 'block'; document.getElementById('capacity-container').classList.add('hide-capacity');
+            }
+
+            // --- QR CODE & SMART LINK ---
+            window.generateSmartLink = function() {
+                const portalData = localStorage.getItem('portals');
+                if (!portalData || JSON.parse(portalData).length === 0) { window.showNotification('Error', 'Tidak ada portal.', 'error'); return; }
+                const inputField = document.getElementById('generated-smart-link');
+                const modal = document.getElementById('smart-link-modal');
+                const qrDisplayCanvas = document.getElementById('qr-canvas-display');
+                
+                document.getElementById('btn-show-link').style.display = 'flex'; document.getElementById('link-content').style.display = 'none';
+                document.getElementById('btn-show-qr').style.display = 'flex'; document.getElementById('qr-content').style.display = 'none';
+                document.getElementById('capacity-container').classList.remove('hide-capacity');
+                modal.classList.remove('hidden'); modal.style.display = 'flex'; inputField.value = "Generating...";
+
+                setTimeout(() => {
+                    const parsedPortals = JSON.parse(portalData);
+                    const encoded = UrlManager.encode(parsedPortals);
+                    if (encoded) {
+                        const finalParam = `v5_${encoded}`;
+                        if (finalParam.length > MAX_QR_LENGTH) {
+                            document.getElementById('smart-link-modal').style.display = 'none'; document.getElementById('limit-warning-modal').classList.remove('hidden'); document.getElementById('limit-warning-modal').style.display = 'flex'; return;
+                        }
+                        const usedLength = finalParam.length;
+                        const percentage = Math.min(100, Math.round((usedLength / MAX_QR_LENGTH) * 100));
+                        const remaining = Math.max(0, MAX_QR_LENGTH - usedLength);
+                        
+                        const capBar = document.getElementById('capacity-bar');
+                        capBar.style.width = percentage + "%";
+                        document.getElementById('capacity-text').textContent = percentage + "%";
+                        document.getElementById('capacity-detail').textContent = `Sisa Karakter: ${remaining}`;
+                        
+                        if (percentage < 70) capBar.style.background = "var(--success-green)"; else if (percentage < 90) capBar.style.background = "var(--warning-yellow)"; else capBar.style.background = "var(--error-red)";
+
+                        const finalUrl = `${window.location.origin}${window.location.pathname}?p=${finalParam}`;
+                        inputField.value = finalUrl; currentGeneratedUrl = finalUrl; 
+                        renderCustomQR(qrDisplayCanvas, finalUrl, false); 
+                    } else { inputField.value = "Error."; window.showNotification('Error', 'Gagal generate.', 'error'); }
+                }, 100);
+            }
+
+            function renderCustomQR(targetCanvas, textData, isHighQuality) {
+                const size = isHighQuality ? 3000 : 600;
+                const padding = size * 0.05; const cardWidth = size - (padding * 2); const textSpace = size * 0.15; const cardHeight = cardWidth + textSpace;
+                targetCanvas.width = size; targetCanvas.height = size + (textSpace * 0.5); const ctx = targetCanvas.getContext('2d');
+                const qrX = padding; const qrY = padding; const cornerRadius = size * 0.05;
+
+                ctx.fillStyle = '#ffffff'; ctx.shadowColor = "rgba(0, 0, 0, 0.2)"; ctx.shadowBlur = size * 0.03; ctx.shadowOffsetY = size * 0.01;
+                ctx.beginPath(); ctx.roundRect(qrX, qrY, cardWidth, cardHeight, cornerRadius); ctx.fill(); ctx.shadowColor = "transparent";
+
+                const tempQrCanvas = document.createElement('canvas');
+                const qrMargin = cardWidth * 0.1; const qrSize = cardWidth - (qrMargin * 2);
+                const qr = new QRious({ element: tempQrCanvas, value: textData, size: qrSize, level: 'H', backgroundAlpha: 0, foreground: '#000000' });
+                ctx.drawImage(tempQrCanvas, qrX + qrMargin, qrY + qrMargin);
+
+                const logoUrl = "https://i.imghippo.com/files/EePl9866XxI.png";
+                const img = new Image(); img.crossOrigin = "Anonymous";
+                img.onload = function() {
+                    const logoSize = qrSize * 0.18; const centerX = qrX + qrMargin + (qrSize / 2); const centerY = qrY + qrMargin + (qrSize / 2);
+                    ctx.beginPath(); ctx.arc(centerX, centerY, logoSize, 0, 2 * Math.PI); ctx.fillStyle = '#ffffff'; ctx.fill();
+                    ctx.drawImage(img, centerX - (logoSize / 2), centerY - (logoSize / 2), logoSize, logoSize);
+                    drawBottomText(ctx, size, qrY + cardWidth, textSpace);
+                    if (isHighQuality) downloadImage(targetCanvas);
+                };
+                img.onerror = function() { drawBottomText(ctx, size, qrY + cardWidth, textSpace); };
+                img.src = logoUrl;
+            }
+
+            function drawBottomText(ctx, canvasWidth, textStartY, textSpaceHeight) {
+                const fontSize = canvasWidth * 0.035; ctx.font = `600 ${fontSize}px 'Inter', sans-serif`; ctx.fillStyle = '#333333'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+                const textY = textStartY + (textSpaceHeight * 0.4); ctx.fillText("SCAN UNTUK MASUK KE PORTAL THAMUZ", canvasWidth / 2, textY);
+            }
+
+            function downloadImage(canvas) {
+                try {
+                    const dataUrl = canvas.toDataURL('image/png'); const link = document.createElement('a'); link.download = 'Thamuz_Portal_QR.png'; link.href = dataUrl; link.click();
+                    window.showNotification('Success', 'Download dimulai!', 'success');
+                } catch (e) { window.showNotification('Error', 'Gagal menyimpan gambar.', 'error'); }
+            }
+
+            window.downloadHighResQR = function() {
+                if (!currentGeneratedUrl) { window.showNotification('Error', 'Smart Link belum di-generate.', 'error'); return; }
+                window.showNotification('Processing', 'Memproses QR Code High-Res...', 'success');
+                const downloadCanvas = document.createElement('canvas'); renderCustomQR(downloadCanvas, currentGeneratedUrl, true);
+            }
+
+            window.copySmartLink = function() {
+                const inputField = document.getElementById('generated-smart-link');
+                inputField.select();
+                inputField.setSelectionRange(0, 99999);
+                
+                try {
+                   const successful = document.execCommand('copy');
+                   if(successful) {
+                       window.showNotification('Berhasil!', 'Link disalin.', 'success');
+                   } else {
+                       window.showNotification('Error', 'Gagal menyalin link.', 'error');
+                   }
+                } catch (err) {
+                    window.showNotification('Error', 'Gagal menyalin link.', 'error');
+                }
+            }
+
+            // --- IMPORT/BACKUP ---
+            window.backupData = async () => {
+                const dataToBackup = { portals: JSON.parse(localStorage.getItem('portals')) || defaultPortals };
+                try {
+                    const zip = new JSZip(); zip.file("uranusfazry_backup.json", JSON.stringify(dataToBackup, null, 2));
+                    const content = await zip.generateAsync({ type: "blob", compression: "DEFLATE" });
+                    const url = URL.createObjectURL(content); const a = document.createElement('a'); a.href = url; a.download = 'uranusfazry_backup.zip'; document.body.appendChild(a); a.click(); document.body.removeChild(a); URL.revokeObjectURL(url);
+                    window.showNotification('Backup Ready', 'File backup sedang didownload.', 'success');
+                } catch (error) { window.showNotification('Backup Error', 'Gagal membuat backup.', 'error'); }
+            };
+
+            window.importData = () => { importFileInput.click(); };
+            async function handleFileImport(event) {
+                const file = event.target.files[0]; if (!file) return;
+                const reader = new FileReader();
+                reader.onload = async (e) => {
+                    try {
+                        let jsonContent;
+                        if (file.name.endsWith(".zip")) { const zip = await JSZip.loadAsync(e.target.result); jsonContent = await zip.file("uranusfazry_backup.json").async("string"); } else { jsonContent = e.target.result; }
+                        const imported = JSON.parse(jsonContent);
+                        if (imported && Array.isArray(imported.portals)) { localStorage.setItem('portals', JSON.stringify(imported.portals)); showConfirmationModal('Data imported. Page will reload.', () => location.reload()); } else { window.showNotification('Import Error', 'Format file tidak valid.', 'error'); }
+                    } catch (error) { window.showNotification('Import Error', 'Gagal membaca file.', 'error'); }
+                };
+                if (file.name.endsWith(".zip")) reader.readAsArrayBuffer(file); else reader.readAsText(file); event.target.value = '';
+            }
+
+            // --- WHATSAPP GENERATOR ---
+            // 1. DATA NEGARA (DIKELOMPOKKAN PER BENUA)
+            const countryGroups = [
+                {
+                    region: "🌏 ASIA",
+                    countries: [
+                        { code: "62", name: "Indonesia" },
+                        { code: "60", name: "Malaysia" },
+                        { code: "65", name: "Singapore" },
+                        { code: "63", name: "Philippines" },
+                        { code: "66", name: "Thailand" },
+                        { code: "84", name: "Vietnam" },
+                        { code: "82", name: "South Korea" },
+                        { code: "81", name: "Japan" },
+                        { code: "86", name: "China" },
+                        { code: "91", name: "India" },
+                        { code: "92", name: "Pakistan" },
+                        { code: "971", name: "United Arab Emirates (UAE)" },
+                        { code: "966", name: "Saudi Arabia" },
+                        { code: "94", name: "Sri Lanka" },
+                        { code: "880", name: "Bangladesh" },
+                        { code: "98", name: "Iran" },
+                        { code: "964", name: "Iraq" },
+                        { code: "90", name: "Turkey" },
+                        { code: "856", name: "Laos" },
+                        { code: "855", name: "Cambodia" },
+                        { code: "95", name: "Myanmar" },
+                        { code: "853", name: "Macau" },
+                        { code: "852", name: "Hong Kong" }
+                    ]
+                },
+                {
+                    region: "🌍 EUROPE",
+                    countries: [
+                        { code: "44", name: "United Kingdom (UK)" },
+                        { code: "49", name: "Germany" },
+                        { code: "33", name: "France" },
+                        { code: "31", name: "Netherlands" },
+                        { code: "34", name: "Spain" },
+                        { code: "39", name: "Italy" },
+                        { code: "43", name: "Austria" },
+                        { code: "41", name: "Switzerland" },
+                        { code: "45", name: "Denmark" },
+                        { code: "46", name: "Sweden" },
+                        { code: "47", name: "Norway" },
+                        { code: "48", name: "Poland" },
+                        { code: "7", name: "Russia" },
+                        { code: "420", name: "Czech Republic" },
+                        { code: "421", name: "Slovakia" }
+                    ]
+                },
+                {
+                    region: "🌎 AMERICA",
+                    countries: [
+                        { code: "1", name: "USA / Canada" },
+                        { code: "52", name: "Mexico" },
+                        { code: "55", name: "Brazil" },
+                        { code: "54", name: "Argentina" },
+                        { code: "57", name: "Colombia" },
+                        { code: "58", name: "Venezuela" },
+                        { code: "56", name: "Chile" },
+                        { code: "51", name: "Peru" }
+                    ]
+                },
+                {
+                    region: "🌍 AFRICA",
+                    countries: [
+                        { code: "20", name: "Egypt" },
+                        { code: "212", name: "Morocco" },
+                        { code: "234", name: "Nigeria" },
+                        { code: "254", name: "Kenya" },
+                        { code: "27", name: "South Africa" },
+                        { code: "256", name: "Uganda" }
+                    ]
+                },
+                {
+                    region: "🌏 OCEANIA",
+                    countries: [
+                        { code: "61", name: "Australia" },
+                        { code: "64", name: "New Zealand" }
+                    ]
+                }
+            ];
+
+            function populateCountries() {
+                const select = document.getElementById('wa-country-code'); select.innerHTML = '';
+                countryGroups.forEach(group => {
+                    const optgroup = document.createElement('optgroup'); optgroup.label = group.region; optgroup.style.color = "var(--plasma-blue)"; optgroup.style.backgroundColor = "rgba(11, 14, 49, 0.95)";
+                    group.countries.forEach(c => { const option = document.createElement('option'); option.value = c.code; option.textContent = `+${c.code} (${c.name})`; optgroup.appendChild(option); });
+                    select.appendChild(optgroup);
+                });
+            }
+
+            window.showWhatsAppModal = function() {
+                document.getElementById('whatsapp-link-modal').style.display = 'flex'; document.getElementById('wa-form').reset(); document.getElementById('wa-result-container').style.display = 'none';
+                if(document.getElementById('wa-country-code').options.length === 0) populateCountries();
+                if (mobileMenu.classList.contains('open')) closeMobileMenu();
+            }
+
+            window.generateWhatsAppLink = function() {
+                const countryCode = document.getElementById('wa-country-code').value; let cleanNum = document.getElementById('wa-number').value.replace(/\D/g, ''); const msgInput = document.getElementById('wa-message').value;
+                if (!cleanNum) { window.showNotification('Error', 'Nomor wajib diisi.', 'error'); return; }
+                if (cleanNum.startsWith('0')) cleanNum = cleanNum.substring(1);
+                let waUrl = `https://wa.me/${countryCode}${cleanNum}`; if (msgInput.trim().length > 0) waUrl += `?text=${encodeURIComponent(msgInput)}`;
+                document.getElementById('wa-result-link').value = waUrl; document.getElementById('wa-result-container').style.display = 'block'; window.showNotification('Success', 'Link WhatsApp dibuat!', 'success');
+            }
+
+            window.copyWaLink = function() {
+                const copyText = document.getElementById("wa-result-link");
+                copyText.select();
+                copyText.setSelectionRange(0, 99999); // For mobile devices
+                
+                try {
+                    const successful = document.execCommand('copy');
+                    if(successful) {
+                        window.showNotification('Copied', 'Link disalin.', 'success');
+                    } else {
+                        window.showNotification('Error', 'Gagal menyalin link.', 'error');
+                    }
+                } catch (err) {
+                    window.showNotification('Error', 'Gagal menyalin link.', 'error');
+                    console.error('Fallback copy failed', err);
+                }
+            }
+
+            window.openWaLink = function() { const url = document.getElementById("wa-result-link").value; if(url) window.open(url, '_blank'); }
+
+            initPortalApp();
+        });
     </script>
 
 </body>
